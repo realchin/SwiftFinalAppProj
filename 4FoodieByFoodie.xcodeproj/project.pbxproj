@@ -15,6 +15,11 @@
 		006552B0281A16CC00662743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006552AF281A16CC00662743 /* Assets.xcassets */; };
 		006552B3281A16CC00662743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006552B1281A16CC00662743 /* LaunchScreen.storyboard */; };
 		006552BB281A1E9100662743 /* BostonianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006552BA281A1E9100662743 /* BostonianViewController.swift */; };
+		007C8C06281B09840024104D /* ItalianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C8C05281B09840024104D /* ItalianViewController.swift */; };
+		007C8C08281B09940024104D /* KoreanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C8C07281B09940024104D /* KoreanViewController.swift */; };
+		007C8C0A281B0C000024104D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C8C09281B0C000024104D /* AboutViewController.swift */; };
+		007C8C0C281B0D470024104D /* FoodRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C8C0B281B0D470024104D /* FoodRecViewController.swift */; };
+		007C8C0E281B0FC90024104D /* bostonianFoodsTxt.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 007C8C0D281B0FC90024104D /* bostonianFoodsTxt.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		006552B2281A16CC00662743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		006552B4281A16CC00662743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		006552BA281A1E9100662743 /* BostonianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BostonianViewController.swift; sourceTree = "<group>"; };
+		007C8C05281B09840024104D /* ItalianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItalianViewController.swift; sourceTree = "<group>"; };
+		007C8C07281B09940024104D /* KoreanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreanViewController.swift; sourceTree = "<group>"; };
+		007C8C09281B0C000024104D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		007C8C0B281B0D470024104D /* FoodRecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecViewController.swift; sourceTree = "<group>"; };
+		007C8C0D281B0FC90024104D /* bostonianFoodsTxt.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = bostonianFoodsTxt.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +54,7 @@
 		0065529A281A16CB00662743 = {
 			isa = PBXGroup;
 			children = (
+				007C8C0D281B0FC90024104D /* bostonianFoodsTxt.rtf */,
 				006552A5281A16CB00662743 /* 4FoodieByFoodie */,
 				006552A4281A16CB00662743 /* Products */,
 			);
@@ -63,8 +74,12 @@
 				006552A6281A16CB00662743 /* AppDelegate.swift */,
 				006552A8281A16CB00662743 /* SceneDelegate.swift */,
 				006552AA281A16CB00662743 /* SelectionViewController.swift */,
+				007C8C09281B0C000024104D /* AboutViewController.swift */,
 				006552BA281A1E9100662743 /* BostonianViewController.swift */,
 				0058F069281A484B0086C872 /* ChineseViewController.swift */,
+				007C8C05281B09840024104D /* ItalianViewController.swift */,
+				007C8C07281B09940024104D /* KoreanViewController.swift */,
+				007C8C0B281B0D470024104D /* FoodRecViewController.swift */,
 				006552AC281A16CB00662743 /* Main.storyboard */,
 				006552AF281A16CC00662743 /* Assets.xcassets */,
 				006552B1281A16CC00662743 /* LaunchScreen.storyboard */,
@@ -134,6 +149,7 @@
 				006552B3281A16CC00662743 /* LaunchScreen.storyboard in Resources */,
 				006552B0281A16CC00662743 /* Assets.xcassets in Resources */,
 				006552AE281A16CB00662743 /* Main.storyboard in Resources */,
+				007C8C0E281B0FC90024104D /* bostonianFoodsTxt.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,9 +161,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				006552BB281A1E9100662743 /* BostonianViewController.swift in Sources */,
+				007C8C06281B09840024104D /* ItalianViewController.swift in Sources */,
+				007C8C08281B09940024104D /* KoreanViewController.swift in Sources */,
 				0058F06A281A484B0086C872 /* ChineseViewController.swift in Sources */,
 				006552AB281A16CB00662743 /* SelectionViewController.swift in Sources */,
+				007C8C0C281B0D470024104D /* FoodRecViewController.swift in Sources */,
 				006552A7281A16CB00662743 /* AppDelegate.swift in Sources */,
+				007C8C0A281B0C000024104D /* AboutViewController.swift in Sources */,
 				006552A9281A16CB00662743 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
