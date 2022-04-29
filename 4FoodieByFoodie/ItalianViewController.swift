@@ -51,10 +51,10 @@ class ItalianViewController: UIViewController {
                 try audioPlayer = AVAudioPlayer(data: sound.data)
                 audioPlayer.play()
             } catch {
-                print("🤬 ERROR: \(error.localizedDescription) Could not initialize AvAudioPlayer object")
+                print("ERROR!")
             }
         } else {
-            print("🤬 ERROR: Could not read data from file sound0")
+            print("ERROR!")
         }
     }
     
