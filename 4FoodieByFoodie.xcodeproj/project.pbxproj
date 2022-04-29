@@ -16,6 +16,8 @@
 		006552B0281A16CC00662743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006552AF281A16CC00662743 /* Assets.xcassets */; };
 		006552B3281A16CC00662743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006552B1281A16CC00662743 /* LaunchScreen.storyboard */; };
 		006552BB281A1E9100662743 /* BostonianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006552BA281A1E9100662743 /* BostonianViewController.swift */; };
+		006D0EC9281B9858001355E9 /* ItalianFoodRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D0EC8281B9858001355E9 /* ItalianFoodRecViewController.swift */; };
+		006D0ECB281B986A001355E9 /* KoreanFoodRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D0ECA281B986A001355E9 /* KoreanFoodRecViewController.swift */; };
 		007C8C06281B09840024104D /* ItalianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C8C05281B09840024104D /* ItalianViewController.swift */; };
 		007C8C08281B09940024104D /* KoreanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C8C07281B09940024104D /* KoreanViewController.swift */; };
 		007C8C0A281B0C000024104D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C8C09281B0C000024104D /* AboutViewController.swift */; };
@@ -36,6 +38,8 @@
 		006552B2281A16CC00662743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		006552B4281A16CC00662743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		006552BA281A1E9100662743 /* BostonianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BostonianViewController.swift; sourceTree = "<group>"; };
+		006D0EC8281B9858001355E9 /* ItalianFoodRecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItalianFoodRecViewController.swift; sourceTree = "<group>"; };
+		006D0ECA281B986A001355E9 /* KoreanFoodRecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreanFoodRecViewController.swift; sourceTree = "<group>"; };
 		007C8C05281B09840024104D /* ItalianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItalianViewController.swift; sourceTree = "<group>"; };
 		007C8C07281B09940024104D /* KoreanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreanViewController.swift; sourceTree = "<group>"; };
 		007C8C09281B0C000024104D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				007C8C07281B09940024104D /* KoreanViewController.swift */,
 				007C8C0B281B0D470024104D /* BosFoodRecViewController.swift */,
 				005BA617281B861000A6078E /* ChineseFoodRecViewController.swift */,
+				006D0EC8281B9858001355E9 /* ItalianFoodRecViewController.swift */,
+				006D0ECA281B986A001355E9 /* KoreanFoodRecViewController.swift */,
 				006552AC281A16CB00662743 /* Main.storyboard */,
 				006552AF281A16CC00662743 /* Assets.xcassets */,
 				006552B1281A16CC00662743 /* LaunchScreen.storyboard */,
@@ -238,9 +244,11 @@
 				006552AB281A16CB00662743 /* SelectionViewController.swift in Sources */,
 				007C8C0C281B0D470024104D /* BosFoodRecViewController.swift in Sources */,
 				009B659F281B47A200119265 /* APIKeys.swift in Sources */,
+				006D0EC9281B9858001355E9 /* ItalianFoodRecViewController.swift in Sources */,
 				006552A7281A16CB00662743 /* AppDelegate.swift in Sources */,
 				007C8C0A281B0C000024104D /* AboutViewController.swift in Sources */,
 				006552A9281A16CB00662743 /* SceneDelegate.swift in Sources */,
+				006D0ECB281B986A001355E9 /* KoreanFoodRecViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

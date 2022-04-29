@@ -24,16 +24,8 @@
                                 <color key="textColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's Play FoodMan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDV-H6-jWy">
-                                <rect key="frame" x="42" y="88" width="330" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="30"/>
-                                <color key="textColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vG6-do-9O7">
-                                <rect key="frame" x="0.0" y="852" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="847" width="414" height="49"/>
                                 <items>
                                     <barButtonItem title="About" id="Cbx-Mn-uxZ">
                                         <connections>
@@ -106,6 +98,14 @@
                                     <segue destination="hPe-lg-4VE" kind="presentation" modalPresentationStyle="fullScreen" id="0PE-X7-aQ9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's Play FoodMan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDV-H6-jWy">
+                                <rect key="frame" x="58" y="89" width="299" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="30"/>
+                                <color key="textColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -231,15 +231,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="xN9-zc-K3b"/>
                     <connections>
-                        <outlet property="bostonianImageView" destination="vAU-iD-BVU" id="LX9-Td-sQq"/>
-                        <outlet property="foodBeingRevealedLabel" destination="1O8-7N-sO3" id="Sk4-A5-Vfm"/>
-                        <outlet property="foodsGuessedLabel" destination="rE3-FW-jUC" id="15Q-5Z-iD9"/>
-                        <outlet property="foodsMissedLabel" destination="UcV-Zr-coR" id="ngC-xQ-55s"/>
+                        <outlet property="flowerImageView" destination="vAU-iD-BVU" id="LX9-Td-sQq"/>
                         <outlet property="gameStatusMessageLabel" destination="cTM-m4-Yt9" id="hWn-wQ-RHq"/>
-                        <outlet property="guessedLetterButton" destination="7PN-Vc-dQM" id="3XN-Qn-clv"/>
+                        <outlet property="guessLetterButton" destination="7PN-Vc-dQM" id="3XN-Qn-clv"/>
                         <outlet property="guessedLetterTextField" destination="74s-zc-sCC" id="uEv-13-I6E"/>
                         <outlet property="playAgainButton" destination="tIG-Gg-zsk" id="MhL-gY-8Lk"/>
-                        <segue destination="gG4-xE-f5E" kind="show" identifier="ShowBostonianRec" id="HME-1Z-2bf"/>
+                        <outlet property="wordBeingRevealedLabel" destination="1O8-7N-sO3" id="Sk4-A5-Vfm"/>
+                        <outlet property="wordsGuessedLabel" destination="rE3-FW-jUC" id="15Q-5Z-iD9"/>
+                        <outlet property="wordsMissedLabel" destination="UcV-Zr-coR" id="ngC-xQ-55s"/>
+                        <segue destination="gG4-xE-f5E" kind="show" identifier="ShowBostonianFoodRec" id="HME-1Z-2bf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAJ-6j-bon" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -398,24 +398,135 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="korean" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oki-Dr-Bfq">
-                                <rect key="frame" x="180" y="280" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foods Guessed: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV9-fD-rrg">
+                                <rect key="frame" x="20" y="48" width="230" height="21"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foods Missed: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9s-aV-pSa">
+                                <rect key="frame" x="20" y="106" width="136.5" height="21"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VmQ-Ak-Emo">
+                                <rect key="frame" x="248" y="44" width="146" height="96"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chogi, chogi, chogi. How Many Guesses Till Banchan Time?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZz-AJ-7AJ">
+                                <rect key="frame" x="0.0" y="160" width="414" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="y1R-gD-hRN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOm-8X-7X2">
+                                <rect key="frame" x="202.5" y="254" width="9.5" height="22"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y9F-KT-CMU">
+                                <rect key="frame" x="133" y="311" width="148" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zow-nU-2ZC">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="gRW-jQ-9YY"/>
+                                            <constraint firstAttribute="width" constant="30" id="jCa-bO-gUG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <action selector="doneKeyPressed:" destination="hPe-lg-4VE" eventType="primaryActionTriggered" id="MVc-Ci-j64"/>
+                                            <action selector="guessedLetterFieldChanged:" destination="hPe-lg-4VE" eventType="editingChanged" id="Xcx-rJ-Aiq"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pon-yO-vJW">
+                                        <rect key="frame" x="30" y="0.0" width="118" height="34"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Guess a Letter"/>
+                                        <connections>
+                                            <action selector="guessLetterButtonPressed:" destination="hPe-lg-4VE" eventType="touchUpInside" id="Soi-i6-enM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pon-yO-vJW" firstAttribute="leading" secondItem="zow-nU-2ZC" secondAttribute="trailing" id="N8v-pY-fpY"/>
+                                    <constraint firstAttribute="trailing" secondItem="pon-yO-vJW" secondAttribute="trailing" id="eif-MV-nAY"/>
+                                    <constraint firstItem="pon-yO-vJW" firstAttribute="top" secondItem="Y9F-KT-CMU" secondAttribute="top" id="sjE-ik-qwT"/>
+                                </constraints>
+                            </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSa-ew-WZj">
+                                <rect key="frame" x="159" y="353" width="91" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="ad2-5d-KR3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgainButtonPressed:" destination="hPe-lg-4VE" eventType="touchUpInside" id="C50-4j-8Eh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've Made Zero Guesses" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydh-9C-Ow0">
+                                <rect key="frame" x="107" y="394" width="200.5" height="50"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower8" translatesAutoresizingMaskIntoConstraints="NO" id="FAX-ab-cvT">
+                                <rect key="frame" x="0.0" y="452" width="414" height="410"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="410" id="HsY-Gi-RDd"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dK1-vA-DPB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FSa-ew-WZj" firstAttribute="leading" secondItem="dK1-vA-DPB" secondAttribute="leading" constant="159" id="1aW-p6-9L0"/>
+                            <constraint firstItem="VmQ-Ak-Emo" firstAttribute="leading" secondItem="S9s-aV-pSa" secondAttribute="trailing" constant="8" symbolic="YES" id="1r2-V9-MLf"/>
+                            <constraint firstItem="FSa-ew-WZj" firstAttribute="trailing" secondItem="HV9-fD-rrg" secondAttribute="trailing" id="2Ep-qA-9Df"/>
+                            <constraint firstItem="FAX-ab-cvT" firstAttribute="bottom" secondItem="dK1-vA-DPB" secondAttribute="bottom" id="984-DN-ZIc"/>
+                            <constraint firstItem="FSa-ew-WZj" firstAttribute="top" secondItem="Y9F-KT-CMU" secondAttribute="bottom" constant="8" symbolic="YES" id="9CD-mS-tge"/>
+                            <constraint firstItem="NZz-AJ-7AJ" firstAttribute="trailing" secondItem="FAX-ab-cvT" secondAttribute="trailing" id="9am-qu-iyJ"/>
+                            <constraint firstItem="Ydh-9C-Ow0" firstAttribute="top" secondItem="FSa-ew-WZj" secondAttribute="bottom" constant="8" symbolic="YES" id="EhM-4D-ThV"/>
+                            <constraint firstItem="NZz-AJ-7AJ" firstAttribute="centerX" secondItem="Ydh-9C-Ow0" secondAttribute="centerX" id="GGE-1R-z8v"/>
+                            <constraint firstItem="HV9-fD-rrg" firstAttribute="leading" secondItem="F4C-3g-AWo" secondAttribute="leadingMargin" id="HB8-Xa-7ef"/>
+                            <constraint firstItem="HV9-fD-rrg" firstAttribute="top" secondItem="dK1-vA-DPB" secondAttribute="top" constant="4" id="IT5-FM-hWh"/>
+                            <constraint firstItem="vOm-8X-7X2" firstAttribute="top" secondItem="NZz-AJ-7AJ" secondAttribute="bottom" constant="8" symbolic="YES" id="IZb-Ct-8jk"/>
+                            <constraint firstItem="NZz-AJ-7AJ" firstAttribute="leading" secondItem="F4C-3g-AWo" secondAttribute="leading" id="IxT-Db-nks"/>
+                            <constraint firstItem="NZz-AJ-7AJ" firstAttribute="centerX" secondItem="vOm-8X-7X2" secondAttribute="centerX" id="SZ0-aS-HOn"/>
+                            <constraint firstItem="FAX-ab-cvT" firstAttribute="top" secondItem="Ydh-9C-Ow0" secondAttribute="bottom" constant="8" symbolic="YES" id="TEs-8M-hYW"/>
+                            <constraint firstItem="NZz-AJ-7AJ" firstAttribute="leading" secondItem="FAX-ab-cvT" secondAttribute="leading" id="YDE-IY-9Fe"/>
+                            <constraint firstItem="FSa-ew-WZj" firstAttribute="top" secondItem="F4C-3g-AWo" secondAttribute="top" constant="353" id="ZHv-jK-MDV"/>
+                            <constraint firstItem="NZz-AJ-7AJ" firstAttribute="top" secondItem="VmQ-Ak-Emo" secondAttribute="bottom" constant="20" id="daK-C3-t0F"/>
+                            <constraint firstItem="HV9-fD-rrg" firstAttribute="leading" secondItem="S9s-aV-pSa" secondAttribute="leading" id="eb0-bi-beF"/>
+                            <constraint firstItem="NZz-AJ-7AJ" firstAttribute="centerX" secondItem="Y9F-KT-CMU" secondAttribute="centerX" id="hWs-T6-nKB"/>
+                            <constraint firstItem="NZz-AJ-7AJ" firstAttribute="top" secondItem="VmQ-Ak-Emo" secondAttribute="bottom" constant="20" id="lth-lu-gBO"/>
+                            <constraint firstAttribute="trailing" secondItem="NZz-AJ-7AJ" secondAttribute="trailing" id="uxD-1N-CS0"/>
+                            <constraint firstItem="NZz-AJ-7AJ" firstAttribute="top" secondItem="F4C-3g-AWo" secondAttribute="top" constant="160" id="xXJ-qX-SF2"/>
+                            <constraint firstItem="NZz-AJ-7AJ" firstAttribute="top" secondItem="S9s-aV-pSa" secondAttribute="bottom" constant="33" id="yYr-hW-8pN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZAa-4q-rbq"/>
                     <connections>
-                        <segue destination="N0g-R9-gpc" kind="show" id="8k4-JJ-2Fu"/>
+                        <outlet property="flowerImageView" destination="FAX-ab-cvT" id="GFh-5Q-MaI"/>
+                        <outlet property="gameStatusMessageLabel" destination="Ydh-9C-Ow0" id="58Z-Vd-UQT"/>
+                        <outlet property="guessLetterButton" destination="pon-yO-vJW" id="0Al-9l-rtX"/>
+                        <outlet property="guessedLetterTextField" destination="zow-nU-2ZC" id="Z7n-QX-m55"/>
+                        <outlet property="playAgainButton" destination="FSa-ew-WZj" id="RGX-Ka-1Ik"/>
+                        <outlet property="wordBeingRevealedLabel" destination="vOm-8X-7X2" id="R44-oj-qKa"/>
+                        <outlet property="wordsGuessedLabel" destination="HV9-fD-rrg" id="B2P-ft-9ec"/>
+                        <outlet property="wordsMissedLabel" destination="S9s-aV-pSa" id="icw-jS-FiE"/>
+                        <segue destination="N0g-R9-gpc" kind="show" identifier="ShowKoreanFoodRec" id="8k4-JJ-2Fu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BPe-w9-9Ub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-314" y="856"/>
+            <point key="canvasLocation" x="-314.49275362318843" y="837.72321428571422"/>
         </scene>
         <!--Italian View Controller-->
         <scene sceneID="4CL-c6-Qiq">
@@ -425,24 +536,138 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="italian" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E8h-ht-Idm">
-                                <rect key="frame" x="96" y="309" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Foods Guessed: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJQ-Gu-1Rm">
+                                <rect key="frame" x="20" y="48" width="230" height="21"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NUx-ME-ik7">
+                                <rect key="frame" x="248" y="44" width="146" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="cOE-gk-SyC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tsk, tsk, tsk. How Many Guesses Till Pasto Time?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1k-b6-LV7">
+                                <rect key="frame" x="20" y="160" width="369" height="58"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="_" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vM-pA-zeT">
+                                <rect key="frame" x="202.5" y="226" width="9.5" height="22"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ySu-KV-vUz">
+                                <rect key="frame" x="133" y="311" width="148" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FEk-p8-57v">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="asf-Zk-eyA"/>
+                                            <constraint firstAttribute="height" constant="34" id="ySe-wX-KAp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <action selector="doneKeyPressed:" destination="vQg-Fe-JIG" eventType="primaryActionTriggered" id="qwK-sr-nYc"/>
+                                            <action selector="guessedLetterFieldChanged:" destination="vQg-Fe-JIG" eventType="editingChanged" id="qsP-1o-PIo"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4QZ-Qp-fD2">
+                                        <rect key="frame" x="30" y="0.0" width="118" height="34"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Guess a Letter"/>
+                                        <connections>
+                                            <action selector="guessLetterButtonPressed:" destination="vQg-Fe-JIG" eventType="touchUpInside" id="6DK-AZ-3b0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4QZ-Qp-fD2" firstAttribute="top" secondItem="ySu-KV-vUz" secondAttribute="top" id="MOV-hw-nAK"/>
+                                    <constraint firstAttribute="trailing" secondItem="4QZ-Qp-fD2" secondAttribute="trailing" id="am6-ma-yD6"/>
+                                    <constraint firstItem="4QZ-Qp-fD2" firstAttribute="leading" secondItem="FEk-p8-57v" secondAttribute="trailing" id="rVf-hG-9Pd"/>
+                                </constraints>
+                            </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zby-Ec-6KZ">
+                                <rect key="frame" x="159" y="353" width="91" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgainButtonPressed:" destination="vQg-Fe-JIG" eventType="touchUpInside" id="7By-Bm-lsG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="You've Made Zero Guesses" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKy-ac-tRN">
+                                <rect key="frame" x="22" y="392" width="370" height="18.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="flower8" translatesAutoresizingMaskIntoConstraints="NO" id="VA6-Pm-dXc">
+                                <rect key="frame" x="0.0" y="418.5" width="414" height="443.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Foods Missed: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5q-7m-eye">
+                                <rect key="frame" x="20" y="77" width="220" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7bA-CV-RyW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T39-gP-wlb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T39-gP-wlb" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5vM-pA-zeT" secondAttribute="trailing" id="0Z0-VY-ggQ"/>
+                            <constraint firstItem="VA6-Pm-dXc" firstAttribute="bottom" secondItem="T39-gP-wlb" secondAttribute="bottom" id="2Vm-2S-cxq"/>
+                            <constraint firstItem="pJQ-Gu-1Rm" firstAttribute="leading" secondItem="T39-gP-wlb" secondAttribute="leading" constant="20" id="5Mx-bm-iyA"/>
+                            <constraint firstItem="pJQ-Gu-1Rm" firstAttribute="top" secondItem="T39-gP-wlb" secondAttribute="top" constant="4" id="DsN-8M-JGr"/>
+                            <constraint firstItem="X5q-7m-eye" firstAttribute="top" secondItem="pJQ-Gu-1Rm" secondAttribute="bottom" constant="8" symbolic="YES" id="GyL-Si-eqS"/>
+                            <constraint firstItem="VA6-Pm-dXc" firstAttribute="leading" secondItem="T39-gP-wlb" secondAttribute="leading" id="IVf-wr-IDv"/>
+                            <constraint firstItem="ySu-KV-vUz" firstAttribute="centerX" secondItem="5vM-pA-zeT" secondAttribute="centerX" id="MFg-Nz-9DV"/>
+                            <constraint firstItem="T39-gP-wlb" firstAttribute="trailing" secondItem="H1k-b6-LV7" secondAttribute="trailing" constant="25" id="OWs-5H-FZ3"/>
+                            <constraint firstItem="5vM-pA-zeT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="T39-gP-wlb" secondAttribute="leading" id="QDA-3W-L5L"/>
+                            <constraint firstItem="eKy-ac-tRN" firstAttribute="leading" secondItem="T39-gP-wlb" secondAttribute="leading" constant="22" id="STx-Gi-PzB"/>
+                            <constraint firstItem="ySu-KV-vUz" firstAttribute="leading" secondItem="T39-gP-wlb" secondAttribute="leading" constant="133" id="Vu4-ly-qHu"/>
+                            <constraint firstItem="T39-gP-wlb" firstAttribute="trailing" secondItem="pJQ-Gu-1Rm" secondAttribute="trailing" constant="164" id="Xjh-oE-2HC"/>
+                            <constraint firstItem="NUx-ME-ik7" firstAttribute="leading" secondItem="X5q-7m-eye" secondAttribute="trailing" constant="8" symbolic="YES" id="aRk-vy-RGI"/>
+                            <constraint firstItem="ySu-KV-vUz" firstAttribute="top" secondItem="5vM-pA-zeT" secondAttribute="bottom" constant="63" id="b2N-K4-2t8"/>
+                            <constraint firstItem="eKy-ac-tRN" firstAttribute="top" secondItem="zby-Ec-6KZ" secondAttribute="bottom" constant="8" symbolic="YES" id="f90-GD-34m"/>
+                            <constraint firstItem="NUx-ME-ik7" firstAttribute="top" secondItem="T39-gP-wlb" secondAttribute="top" id="feK-rz-yEZ"/>
+                            <constraint firstItem="zby-Ec-6KZ" firstAttribute="leading" secondItem="T39-gP-wlb" secondAttribute="leading" constant="159" id="g0w-LJ-4Kz"/>
+                            <constraint firstItem="T39-gP-wlb" firstAttribute="trailing" secondItem="eKy-ac-tRN" secondAttribute="trailing" constant="22" id="idp-Ez-MbN"/>
+                            <constraint firstItem="VA6-Pm-dXc" firstAttribute="top" secondItem="eKy-ac-tRN" secondAttribute="bottom" constant="8" symbolic="YES" id="ihB-RU-nxQ"/>
+                            <constraint firstItem="H1k-b6-LV7" firstAttribute="top" secondItem="X5q-7m-eye" secondAttribute="bottom" constant="33" id="ivZ-3k-54V"/>
+                            <constraint firstItem="VA6-Pm-dXc" firstAttribute="trailing" secondItem="T39-gP-wlb" secondAttribute="trailing" id="jfn-yX-KsU"/>
+                            <constraint firstItem="T39-gP-wlb" firstAttribute="trailing" secondItem="zby-Ec-6KZ" secondAttribute="trailing" constant="164" id="nYI-Ea-m0L"/>
+                            <constraint firstItem="H1k-b6-LV7" firstAttribute="top" secondItem="NUx-ME-ik7" secondAttribute="bottom" constant="20" id="ntr-VN-H8U"/>
+                            <constraint firstItem="T39-gP-wlb" firstAttribute="trailing" secondItem="pJQ-Gu-1Rm" secondAttribute="trailing" constant="164" id="oHs-4T-AEL"/>
+                            <constraint firstItem="T39-gP-wlb" firstAttribute="trailing" secondItem="NUx-ME-ik7" secondAttribute="trailing" constant="20" id="qb9-Ff-72S"/>
+                            <constraint firstItem="zby-Ec-6KZ" firstAttribute="top" secondItem="ySu-KV-vUz" secondAttribute="bottom" constant="8" symbolic="YES" id="thw-KC-Ffq"/>
+                            <constraint firstItem="H1k-b6-LV7" firstAttribute="leading" secondItem="T39-gP-wlb" secondAttribute="leading" constant="20" id="udq-Mm-m2t"/>
+                            <constraint firstItem="X5q-7m-eye" firstAttribute="leading" secondItem="pJQ-Gu-1Rm" secondAttribute="leading" id="v9B-zw-FDP"/>
+                            <constraint firstItem="5vM-pA-zeT" firstAttribute="top" secondItem="H1k-b6-LV7" secondAttribute="bottom" constant="8" symbolic="YES" id="wMh-dp-Qhd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="deO-zL-76P"/>
                     <connections>
-                        <segue destination="XoT-H5-joD" kind="show" id="Oz6-05-tGu"/>
+                        <outlet property="flowerImageView" destination="VA6-Pm-dXc" id="JxV-kf-WP2"/>
+                        <outlet property="gameStatusMessageLabel" destination="eKy-ac-tRN" id="9Jz-OY-wC7"/>
+                        <outlet property="guessLetterButton" destination="4QZ-Qp-fD2" id="hTf-l4-EOl"/>
+                        <outlet property="guessedLetterTextField" destination="FEk-p8-57v" id="HXJ-0O-h01"/>
+                        <outlet property="playAgainButton" destination="zby-Ec-6KZ" id="jTB-di-gQR"/>
+                        <outlet property="wordBeingRevealedLabel" destination="5vM-pA-zeT" id="lhy-nJ-WGm"/>
+                        <outlet property="wordsGuessedLabel" destination="pJQ-Gu-1Rm" id="jHv-hX-NPS"/>
+                        <outlet property="wordsMissedLabel" destination="X5q-7m-eye" id="tbJ-eD-LmB"/>
+                        <segue destination="XoT-H5-joD" kind="show" identifier="ShowItalianFoodRec" id="Oz6-05-tGu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k0P-3o-SlN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="639" y="839"/>
+            <point key="canvasLocation" x="637.68115942028987" y="838.39285714285711"/>
         </scene>
         <!--Chinese View Controller-->
         <scene sceneID="3ZE-ld-wHY">
@@ -541,7 +766,7 @@
                                     <constraint firstAttribute="height" constant="50" id="kl0-R9-4v2"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="xGz-ca-mkc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -685,12 +910,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBc-f1-R7G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1524.6376811594205" y="1542.8571428571429"/>
+            <point key="canvasLocation" x="1525" y="1543"/>
         </scene>
-        <!--View Controller-->
+        <!--Italian Food Rec View Controller-->
         <scene sceneID="dE2-jW-8T7">
             <objects>
-                <viewController id="XoT-H5-joD" sceneMemberID="viewController">
+                <viewController id="XoT-H5-joD" customClass="ItalianFoodRecViewController" customModule="_FoodieByFoodie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0N2-VH-TKd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -702,7 +927,11 @@
                                         <rect key="frame" x="0.0" y="741" width="414" height="49"/>
                                         <items>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="Y1G-ke-ylp"/>
-                                            <barButtonItem title="Return to Homepage" id="plT-4K-haJ"/>
+                                            <barButtonItem title="Return to Homepage" id="plT-4K-haJ">
+                                                <connections>
+                                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="20r-Wr-9nm"/>
+                                                </connections>
+                                            </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="wAw-W5-vWQ"/>
                                         </items>
                                     </toolbar>
@@ -750,12 +979,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yi4-hQ-VXf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="637.68115942028987" y="1542.8571428571429"/>
+            <point key="canvasLocation" x="638" y="1543"/>
         </scene>
-        <!--View Controller-->
+        <!--Korean Food Rec View Controller-->
         <scene sceneID="Io7-VE-Sgs">
             <objects>
-                <viewController id="N0g-R9-gpc" sceneMemberID="viewController">
+                <viewController id="N0g-R9-gpc" customClass="KoreanFoodRecViewController" customModule="_FoodieByFoodie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UCl-lQ-g3r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -767,7 +996,11 @@
                                         <rect key="frame" x="0.0" y="741" width="414" height="49"/>
                                         <items>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="qSt-rW-00G"/>
-                                            <barButtonItem title="Return to Homepage" id="jLU-eM-oVX"/>
+                                            <barButtonItem title="Return to Homepage" id="jLU-eM-oVX">
+                                                <connections>
+                                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="uPh-6P-qqh"/>
+                                                </connections>
+                                            </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="uVT-Zl-BSG"/>
                                         </items>
                                     </toolbar>
@@ -819,7 +1052,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZPg-Le-z2f"/>
+        <segue reference="dI3-3q-Uzv"/>
+        <segue reference="aoV-Yj-opl"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bostonianLabel" width="499" height="552"/>

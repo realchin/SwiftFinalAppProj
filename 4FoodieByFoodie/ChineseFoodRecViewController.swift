@@ -9,7 +9,6 @@ import UIKit
 import MapKit
 
 class ChineseFoodRecViewController: UIViewController {
-
     
     @IBOutlet weak var chineseMapView: MKMapView!
     

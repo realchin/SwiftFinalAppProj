@@ -6,117 +6,152 @@
 //
 
 import UIKit
+import AVFoundation
 
 class BostonianViewController: UIViewController {
     
-    @IBOutlet weak var foodsGuessedLabel: UILabel!
-    @IBOutlet weak var foodsMissedLabel: UILabel!
+    @IBOutlet weak var wordsGuessedLabel: UILabel!
+    @IBOutlet weak var wordsMissedLabel: UILabel!
     
-    @IBOutlet weak var foodBeingRevealedLabel: UILabel!
+    @IBOutlet weak var wordBeingRevealedLabel: UILabel!
     @IBOutlet weak var guessedLetterTextField: UITextField!
-    @IBOutlet weak var guessedLetterButton: UIButton!
+    @IBOutlet weak var guessLetterButton: UIButton!
     @IBOutlet weak var playAgainButton: UIButton!
     @IBOutlet weak var gameStatusMessageLabel: UILabel!
-    @IBOutlet weak var bostonianImageView: UIImageView!
+    @IBOutlet weak var flowerImageView: UIImageView!
     
-    var foodsToGuess = ["ROLL", "CLAMCHOWDER", "LOBSTERROLL"] // uppercase.../ txt file? pull from it
-    var currentFoodIndex = 0
-    var foodToGuess = ""
+    var wordsToGuess = ["ROLL", "CLAMCHOWDER", "LOBSTERROLL"] // uppercase.../ txt file? pull from it
+    var currentWordIndex = 0
+    var wordToGuess = ""
     var lettersGuessed = ""
     let maxNumOfWrongGuesses = 8 // num of images needed
     var wrongGuessesRemaining = 8
-    var foodsGuessedCount = 0
-    var foodsMissedCount = 0
+    var wordsGuessedCount = 0
+    var wordsMissedCount = 0
     var guessCount = 0
     
+    var audioPlayer: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let text = guessedLetterTextField.text!
-        guessedLetterButton.isEnabled = !(text.isEmpty)
-        foodsToGuess = foodsToGuess.shuffled() // SHUFFLING
-        foodToGuess = foodsToGuess[currentFoodIndex]
-        foodBeingRevealedLabel.text = "_" + String(repeating: " _", count: foodToGuess.count-1)
+        guessLetterButton.isEnabled = !(text.isEmpty)
+        wordToGuess = wordsToGuess[currentWordIndex]
+        wordBeingRevealedLabel.text = "_" + String(repeating: " _", count: wordToGuess.count-1)
         
         updateGameStatusLabels()
-        
+    }
+    
+    func playSound(name: String){
+        if let sound = NSDataAsset(name: name){
+            do {
+                try audioPlayer = AVAudioPlayer(data: sound.data)
+                audioPlayer.play()
+            } catch {
+                print("🤬 ERROR: \(error.localizedDescription) Could not initialize AvAudioPlayer object")
+            }
+        } else {
+            print("🤬 ERROR: Could not read data from file sound0")
+        }
     }
     
     func updateUIAfterGuess() {
         guessedLetterTextField.resignFirstResponder()
         guessedLetterTextField.text! = ""
-        guessedLetterButton.isEnabled = false
+        guessLetterButton.isEnabled = false
         
     }
     
-    func formatRevealedFood() {
-        var revealedFood = ""
+    func formatRevealedWord() {
+        var revealedWord = ""
         
-        for letter in foodToGuess {
+        for letter in wordToGuess {
             
             if lettersGuessed.contains(letter) {
-                revealedFood = revealedFood + "\(letter) "
+                revealedWord = revealedWord + "\(letter)"
             } else {
-                revealedFood = revealedFood + "_ "
+                revealedWord = revealedWord + "_ "
             }
         }
-        revealedFood.removeLast()
-        foodBeingRevealedLabel.text = revealedFood
+        
+        revealedWord.removeLast()
+        wordBeingRevealedLabel.text = revealedWord
     }
     
     func updateAfterWinOrLose() {
-        currentFoodIndex += 1
+        
+        currentWordIndex += 1
         guessedLetterTextField.isEnabled = false
-        guessedLetterButton.isEnabled = false
+        guessLetterButton.isEnabled = false
         playAgainButton.isHidden = false
         
         updateGameStatusLabels()
     }
     
     func updateGameStatusLabels() {
-        foodsGuessedLabel.text = "Foods Guessed: \(foodsGuessedCount)"
-        foodsMissedLabel.text = "Foods Missed: \(foodsMissedCount)"
+        wordsGuessedLabel.text = "Words Guessed: \(wordsGuessedCount)"
+        wordsMissedLabel.text = "Words Missed: \(wordsMissedCount)"
+    }
+    
+    func drawCFoodAndPlaySound(currentLetterGuessed: String) {
+        if wordToGuess.contains(currentLetterGuessed) == false {
+            wrongGuessesRemaining = wrongGuessesRemaining - 1
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                UIView.transition(with: self.flowerImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.flowerImageView.image = UIImage(named: "wilt\(self.wrongGuessesRemaining)")}) { (_) in
+                    
+                    if self.wrongGuessesRemaining != 0 {
+                        self.flowerImageView.image = UIImage(named: "flower\(self.wrongGuessesRemaining)")
+                    } else {
+                        self.playSound(name: "word-not-guessed")
+                        UIView.transition(with: self.flowerImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.flowerImageView.image = UIImage(named: "flower\(self.wrongGuessesRemaining)")}, completion: nil)
+                    }
+                    
+                    
+                }
+                self.playSound(name: "incorrect")
+            }
+        } else {
+            playSound(name: "correct")
+        }
     }
     
     func guessALetter() {
         let currentLetterGuessed = guessedLetterTextField.text!
         lettersGuessed = lettersGuessed + currentLetterGuessed
         
-        formatRevealedFood()
+        formatRevealedWord()
+        drawCFoodAndPlaySound(currentLetterGuessed: currentLetterGuessed)
         
-        if foodToGuess.contains(currentLetterGuessed) == false {
+        if wordToGuess.contains(currentLetterGuessed) == false {
             wrongGuessesRemaining = wrongGuessesRemaining - 1
-            bostonianImageView.image = UIImage(named: "flower\(wrongGuessesRemaining)")
+            flowerImageView.image = UIImage(named: "flower\(wrongGuessesRemaining)")
         }
         
+        
         guessCount += 1
-//        var guesses = "Guesses"
-//        if guessCount == 1 {
-//            guesses = "Guess"
-//        }
+        
         let guesses = (guessCount == 1 ? "Guess" : "Guesses") // using ternary op; less code
         gameStatusMessageLabel.text = "You've Made \(guessCount) \(guesses)."
         
-        if foodBeingRevealedLabel.text!.contains("_") == false { // THIS IS WHERE WE TRANSITION TO MAPVIEW
-            performSegue(withIdentifier: "ShowBostonianRec", sender: nil)
-            gameStatusMessageLabel.text = "You've Guessed It! It took you \(guessCount) guesses to guess the word."
-            foodsGuessedCount += 1
+        if wordBeingRevealedLabel.text!.contains("_") == false { // THIS IS WHERE WE TRANSITION TO MAPVIEW
+            performSegue(withIdentifier: "ShowBostonianFoodRec", sender: nil)
+            wordsGuessedCount += 1
             updateAfterWinOrLose()
         } else if wrongGuessesRemaining == 0 {
             gameStatusMessageLabel.text = "So sorry. You are all out of guesses."
-            foodsMissedCount += 1
+            wordsMissedCount += 1
             updateAfterWinOrLose()
         }
         
-        if currentFoodIndex == foodsToGuess.count {
+        if currentWordIndex == wordsToGuess.count {
             gameStatusMessageLabel.text! += "\n\nYou've tried all of the words! Restart from the beginning?"
         }
-        
     }
     
     @IBAction func guessedLetterFieldChanged(_ sender: UITextField) {
         sender.text = String(sender.text?.last ?? " ").trimmingCharacters(in: .whitespaces).uppercased()
-        guessedLetterButton.isEnabled = !(sender.text!.isEmpty)
+        guessLetterButton.isEnabled = !(sender.text!.isEmpty)
     }
     
     @IBAction func doneKeyPressed(_ sender: UITextField) {
@@ -133,20 +168,20 @@ class BostonianViewController: UIViewController {
         updateUIAfterGuess()
     }
     @IBAction func playAgainButtonPressed(_ sender: UIButton) {
-        if currentFoodIndex == foodToGuess.count {
-            currentFoodIndex = 0
-            foodsGuessedCount = 0
-            foodsMissedCount = 0
+        if currentWordIndex == wordToGuess.count {
+            currentWordIndex = 0
+            wordsGuessedCount = 0
+            wordsMissedCount = 0
         }
         
         playAgainButton.isHidden = true
         guessedLetterTextField.isEnabled = true
-        guessedLetterButton.isEnabled = false
-        foodToGuess = foodsToGuess[currentFoodIndex]
+        guessLetterButton.isEnabled = false
+        wordToGuess = wordsToGuess[currentWordIndex]
         wrongGuessesRemaining = maxNumOfWrongGuesses
-        foodBeingRevealedLabel.text = "_" + String(repeating: " _", count: foodToGuess.count-1)
+        wordBeingRevealedLabel.text = "_" + String(repeating: " _", count: wordToGuess.count-1)
         guessCount = 0
-        bostonianImageView.image = UIImage(named: "flower\(maxNumOfWrongGuesses)")
+        flowerImageView.image = UIImage(named: "flower\(maxNumOfWrongGuesses)")
         lettersGuessed = ""
         updateGameStatusLabels()
         gameStatusMessageLabel.text = "You've Made Zero Guesses"

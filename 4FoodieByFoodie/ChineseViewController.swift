@@ -14,7 +14,6 @@ class ChineseViewController: UIViewController {
     @IBOutlet weak var wordsGuessedLabel: UILabel!
     @IBOutlet weak var wordsMissedLabel: UILabel!
     
-    
     @IBOutlet weak var wordBeingRevealedLabel: UILabel!
     @IBOutlet weak var guessedLetterTextField: UITextField!
     @IBOutlet weak var guessLetterButton: UIButton!
@@ -132,16 +131,12 @@ class ChineseViewController: UIViewController {
         
         
         guessCount += 1
-//        var guesses = "Guesses"
-//        if guessCount == 1 {
-//            guesses = "Guess"
-//        }
+
         let guesses = (guessCount == 1 ? "Guess" : "Guesses") // using ternary op; less code
         gameStatusMessageLabel.text = "You've Made \(guessCount) \(guesses)."
         
         if wordBeingRevealedLabel.text!.contains("_") == false { // THIS IS WHERE WE TRANSITION TO MAPVIEW
             performSegue(withIdentifier: "ShowChineseFoodRec", sender: nil)
-            // gameStatusMessageLabel.text = "You've Guessed It! It took you \(guessCount) guesses to guess the word."
             wordsGuessedCount += 1
             updateAfterWinOrLose()
         } else if wrongGuessesRemaining == 0 {
@@ -150,7 +145,6 @@ class ChineseViewController: UIViewController {
             updateAfterWinOrLose()
         }
         
-        // check to c if you played all words
         if currentWordIndex == wordsToGuess.count {
             gameStatusMessageLabel.text! += "\n\nYou've tried all of the words! Restart from the beginning?"
         }
