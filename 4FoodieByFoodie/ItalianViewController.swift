@@ -21,7 +21,8 @@ class ItalianViewController: UIViewController {
     @IBOutlet weak var flowerImageView: UIImageView!
     
     
-    var wordsToGuess = ["CANNOLI", "BUNS"] // a space? btwn Dim_Sum
+    var wordsToGuess = ["BUNS", "TIRAMISU", "PIZZA", "RISOTTO", "LASAGNA", "RAVIOLI", "TORTELLINI", "PESTO", "SPAGHETTI"]
+    
     var currentWordIndex = 0
     var wordToGuess = ""
     var lettersGuessed = ""
@@ -32,6 +33,7 @@ class ItalianViewController: UIViewController {
     var guessCount = 0
     
     var audioPlayer: AVAudioPlayer!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,10 +108,10 @@ class ItalianViewController: UIViewController {
                     } else {
                         self.playSound(name: "word-not-guessed")
                         UIView.transition(with: self.flowerImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.flowerImageView.image = UIImage(named: "flower\(self.wrongGuessesRemaining)")}, completion: nil)
-                        }
-                    
-                    
                     }
+                    
+                    
+                }
                 self.playSound(name: "incorrect")
             }
         } else {
@@ -131,7 +133,7 @@ class ItalianViewController: UIViewController {
         
         
         guessCount += 1
-
+        
         let guesses = (guessCount == 1 ? "Guess" : "Guesses") // using ternary op; less code
         gameStatusMessageLabel.text = "You've Made \(guessCount) \(guesses)."
         
@@ -184,5 +186,5 @@ class ItalianViewController: UIViewController {
         gameStatusMessageLabel.text = "You've Made Zero Guesses"
     }
     
-
+    
 }

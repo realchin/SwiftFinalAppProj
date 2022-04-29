@@ -20,7 +20,8 @@ class KoreanViewController: UIViewController {
     @IBOutlet weak var gameStatusMessageLabel: UILabel!
     @IBOutlet weak var flowerImageView: UIImageView!
     
-    var wordsToGuess = ["BIMBIMBAP", "RICE"] // a space? btwn Dim_Sum
+    var wordsToGuess = ["RICE", "KIMCHI", "BIMBIMBAP", "TTEOKBOKKI", "BULGOGI", "JJIGAE", "JAJANGMYEON", "SAMGYETANG", "RAMYUN"]
+    
     var currentWordIndex = 0
     var wordToGuess = ""
     var lettersGuessed = ""
@@ -105,10 +106,10 @@ class KoreanViewController: UIViewController {
                     } else {
                         self.playSound(name: "word-not-guessed")
                         UIView.transition(with: self.flowerImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.flowerImageView.image = UIImage(named: "flower\(self.wrongGuessesRemaining)")}, completion: nil)
-                        }
-                    
-                    
                     }
+                    
+                    
+                }
                 self.playSound(name: "incorrect")
             }
         } else {
@@ -130,7 +131,7 @@ class KoreanViewController: UIViewController {
         
         
         guessCount += 1
-
+        
         let guesses = (guessCount == 1 ? "Guess" : "Guesses") // using ternary op; less code
         gameStatusMessageLabel.text = "You've Made \(guessCount) \(guesses)."
         
@@ -184,5 +185,5 @@ class KoreanViewController: UIViewController {
         gameStatusMessageLabel.text = "You've Made Zero Guesses"
     }
     
-
+    
 }

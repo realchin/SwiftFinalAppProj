@@ -20,7 +20,8 @@ class BostonianViewController: UIViewController {
     @IBOutlet weak var gameStatusMessageLabel: UILabel!
     @IBOutlet weak var flowerImageView: UIImageView!
     
-    var wordsToGuess = ["ROLL", "CLAMCHOWDER", "LOBSTERROLL"] // uppercase.../ txt file? pull from it
+    var bosWordsToGuess = ["ROLL", "CLAMCHOWDER", "LOBSTERROLL", "BAKEDBEANS", "CREAMPIE", "OYSTER", "FENWAYFRANK", "ROASTBEEF", "CLAMCAKE"]
+    
     var currentWordIndex = 0
     var wordToGuess = ""
     var lettersGuessed = ""
@@ -36,7 +37,7 @@ class BostonianViewController: UIViewController {
         super.viewDidLoad()
         let text = guessedLetterTextField.text!
         guessLetterButton.isEnabled = !(text.isEmpty)
-        wordToGuess = wordsToGuess[currentWordIndex]
+        wordToGuess = bosWordsToGuess[currentWordIndex]
         wordBeingRevealedLabel.text = "_" + String(repeating: " _", count: wordToGuess.count-1)
         
         updateGameStatusLabels()
@@ -109,8 +110,10 @@ class BostonianViewController: UIViewController {
                     
                     
                 }
+                
                 self.playSound(name: "incorrect")
             }
+            
         } else {
             playSound(name: "correct")
         }
@@ -144,22 +147,22 @@ class BostonianViewController: UIViewController {
             updateAfterWinOrLose()
         }
         
-        if currentWordIndex == wordsToGuess.count {
+        if currentWordIndex == bosWordsToGuess.count {
             gameStatusMessageLabel.text! += "\n\nYou've tried all of the words! Restart from the beginning?"
         }
     }
+    @IBAction func doneKeyPressed(_ sender: UITextField) {
+        guessALetter()
+        
+        updateUIAfterGuess()
+    }
+    
     
     @IBAction func guessedLetterFieldChanged(_ sender: UITextField) {
         sender.text = String(sender.text?.last ?? " ").trimmingCharacters(in: .whitespaces).uppercased()
         guessLetterButton.isEnabled = !(sender.text!.isEmpty)
     }
     
-    @IBAction func doneKeyPressed(_ sender: UITextField) {
-        
-        guessALetter()
-        
-        updateUIAfterGuess()
-    }
     
     @IBAction func guessedLetterButtonPressed(_ sender: UIButton) {
         
@@ -177,7 +180,7 @@ class BostonianViewController: UIViewController {
         playAgainButton.isHidden = true
         guessedLetterTextField.isEnabled = true
         guessLetterButton.isEnabled = false
-        wordToGuess = wordsToGuess[currentWordIndex]
+        wordToGuess = bosWordsToGuess[currentWordIndex]
         wrongGuessesRemaining = maxNumOfWrongGuesses
         wordBeingRevealedLabel.text = "_" + String(repeating: " _", count: wordToGuess.count-1)
         guessCount = 0

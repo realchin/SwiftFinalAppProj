@@ -10,7 +10,7 @@ import AVFoundation
 
 
 class ChineseViewController: UIViewController {
-
+    
     @IBOutlet weak var wordsGuessedLabel: UILabel!
     @IBOutlet weak var wordsMissedLabel: UILabel!
     
@@ -21,7 +21,8 @@ class ChineseViewController: UIViewController {
     @IBOutlet weak var gameStatusMessageLabel: UILabel!
     @IBOutlet weak var flowerImageView: UIImageView!
     
-    var wordsToGuess = ["SHUMAI", "HARGOW", "FISH"] // a space? btwn Dim_Sum
+    var wordsToGuess = ["FISH", "CHARSIUBAO", "WUGOK", "LOMAIGAI", "XIAOLONGBAO", "GUOTIE", "BOLONAIWONGBAO", "SIUMAI", "FENGZHAO"]
+    
     var currentWordIndex = 0
     var wordToGuess = ""
     var lettersGuessed = ""
@@ -106,10 +107,10 @@ class ChineseViewController: UIViewController {
                     } else {
                         self.playSound(name: "word-not-guessed")
                         UIView.transition(with: self.flowerImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.flowerImageView.image = UIImage(named: "flower\(self.wrongGuessesRemaining)")}, completion: nil)
-                        }
-                    
-                    
                     }
+                    
+                    
+                }
                 self.playSound(name: "incorrect")
             }
         } else {
@@ -131,7 +132,7 @@ class ChineseViewController: UIViewController {
         
         
         guessCount += 1
-
+        
         let guesses = (guessCount == 1 ? "Guess" : "Guesses") // using ternary op; less code
         gameStatusMessageLabel.text = "You've Made \(guessCount) \(guesses)."
         
@@ -187,5 +188,5 @@ class ChineseViewController: UIViewController {
         gameStatusMessageLabel.text = "You've Made Zero Guesses"
     }
     
-
+    
 }
