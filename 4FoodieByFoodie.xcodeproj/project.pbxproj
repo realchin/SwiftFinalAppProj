@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0058F06A281A484B0086C872 /* ChineseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058F069281A484B0086C872 /* ChineseViewController.swift */; };
+		005BA618281B861000A6078E /* ChineseFoodRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BA617281B861000A6078E /* ChineseFoodRecViewController.swift */; };
 		006552A7281A16CB00662743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006552A6281A16CB00662743 /* AppDelegate.swift */; };
 		006552A9281A16CB00662743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006552A8281A16CB00662743 /* SceneDelegate.swift */; };
 		006552AB281A16CB00662743 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006552AA281A16CB00662743 /* SelectionViewController.swift */; };
@@ -18,12 +19,14 @@
 		007C8C06281B09840024104D /* ItalianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C8C05281B09840024104D /* ItalianViewController.swift */; };
 		007C8C08281B09940024104D /* KoreanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C8C07281B09940024104D /* KoreanViewController.swift */; };
 		007C8C0A281B0C000024104D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C8C09281B0C000024104D /* AboutViewController.swift */; };
-		007C8C0C281B0D470024104D /* FoodRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C8C0B281B0D470024104D /* FoodRecViewController.swift */; };
-		007C8C0E281B0FC90024104D /* bostonianFoodsTxt.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 007C8C0D281B0FC90024104D /* bostonianFoodsTxt.rtf */; };
+		007C8C0C281B0D470024104D /* BosFoodRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C8C0B281B0D470024104D /* BosFoodRecViewController.swift */; };
+		009B659F281B47A200119265 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B659E281B47A200119265 /* APIKeys.swift */; };
+		D6FC5D40AEC583C27FE56E37 /* libPods-4FoodieByFoodie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C421FE6902132B8F557A511 /* libPods-4FoodieByFoodie.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0058F069281A484B0086C872 /* ChineseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseViewController.swift; sourceTree = "<group>"; };
+		005BA617281B861000A6078E /* ChineseFoodRecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseFoodRecViewController.swift; sourceTree = "<group>"; };
 		006552A3281A16CB00662743 /* 4FoodieByFoodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4FoodieByFoodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		006552A6281A16CB00662743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		006552A8281A16CB00662743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,8 +39,11 @@
 		007C8C05281B09840024104D /* ItalianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItalianViewController.swift; sourceTree = "<group>"; };
 		007C8C07281B09940024104D /* KoreanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreanViewController.swift; sourceTree = "<group>"; };
 		007C8C09281B0C000024104D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		007C8C0B281B0D470024104D /* FoodRecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecViewController.swift; sourceTree = "<group>"; };
-		007C8C0D281B0FC90024104D /* bostonianFoodsTxt.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = bostonianFoodsTxt.rtf; sourceTree = "<group>"; };
+		007C8C0B281B0D470024104D /* BosFoodRecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BosFoodRecViewController.swift; sourceTree = "<group>"; };
+		009B659E281B47A200119265 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		225F2F2C874CB00A2A5EF9C3 /* Pods-4FoodieByFoodie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4FoodieByFoodie.debug.xcconfig"; path = "Target Support Files/Pods-4FoodieByFoodie/Pods-4FoodieByFoodie.debug.xcconfig"; sourceTree = "<group>"; };
+		2C421FE6902132B8F557A511 /* libPods-4FoodieByFoodie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-4FoodieByFoodie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DE2A6331C4EB736258F7BF7 /* Pods-4FoodieByFoodie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4FoodieByFoodie.release.xcconfig"; path = "Target Support Files/Pods-4FoodieByFoodie/Pods-4FoodieByFoodie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6FC5D40AEC583C27FE56E37 /* libPods-4FoodieByFoodie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,9 +61,10 @@
 		0065529A281A16CB00662743 = {
 			isa = PBXGroup;
 			children = (
-				007C8C0D281B0FC90024104D /* bostonianFoodsTxt.rtf */,
 				006552A5281A16CB00662743 /* 4FoodieByFoodie */,
 				006552A4281A16CB00662743 /* Products */,
+				C48D2BBA7E1767DC7E38D95C /* Pods */,
+				DF7AF4D88B6AA23EFE71370E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,18 +82,37 @@
 				006552A6281A16CB00662743 /* AppDelegate.swift */,
 				006552A8281A16CB00662743 /* SceneDelegate.swift */,
 				006552AA281A16CB00662743 /* SelectionViewController.swift */,
+				009B659E281B47A200119265 /* APIKeys.swift */,
 				007C8C09281B0C000024104D /* AboutViewController.swift */,
 				006552BA281A1E9100662743 /* BostonianViewController.swift */,
 				0058F069281A484B0086C872 /* ChineseViewController.swift */,
 				007C8C05281B09840024104D /* ItalianViewController.swift */,
 				007C8C07281B09940024104D /* KoreanViewController.swift */,
-				007C8C0B281B0D470024104D /* FoodRecViewController.swift */,
+				007C8C0B281B0D470024104D /* BosFoodRecViewController.swift */,
+				005BA617281B861000A6078E /* ChineseFoodRecViewController.swift */,
 				006552AC281A16CB00662743 /* Main.storyboard */,
 				006552AF281A16CC00662743 /* Assets.xcassets */,
 				006552B1281A16CC00662743 /* LaunchScreen.storyboard */,
 				006552B4281A16CC00662743 /* Info.plist */,
 			);
 			path = 4FoodieByFoodie;
+			sourceTree = "<group>";
+		};
+		C48D2BBA7E1767DC7E38D95C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				225F2F2C874CB00A2A5EF9C3 /* Pods-4FoodieByFoodie.debug.xcconfig */,
+				9DE2A6331C4EB736258F7BF7 /* Pods-4FoodieByFoodie.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DF7AF4D88B6AA23EFE71370E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C421FE6902132B8F557A511 /* libPods-4FoodieByFoodie.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 006552B7281A16CC00662743 /* Build configuration list for PBXNativeTarget "4FoodieByFoodie" */;
 			buildPhases = (
+				AB6460130636F6455D21554C /* [CP] Check Pods Manifest.lock */,
 				0065529F281A16CB00662743 /* Sources */,
 				006552A0281A16CB00662743 /* Frameworks */,
 				006552A1281A16CB00662743 /* Resources */,
+				E7579BE11AFBB3032304771E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,23 +178,66 @@
 				006552B3281A16CC00662743 /* LaunchScreen.storyboard in Resources */,
 				006552B0281A16CC00662743 /* Assets.xcassets in Resources */,
 				006552AE281A16CB00662743 /* Main.storyboard in Resources */,
-				007C8C0E281B0FC90024104D /* bostonianFoodsTxt.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AB6460130636F6455D21554C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-4FoodieByFoodie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7579BE11AFBB3032304771E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-4FoodieByFoodie/Pods-4FoodieByFoodie-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-4FoodieByFoodie/Pods-4FoodieByFoodie-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-4FoodieByFoodie/Pods-4FoodieByFoodie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0065529F281A16CB00662743 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005BA618281B861000A6078E /* ChineseFoodRecViewController.swift in Sources */,
 				006552BB281A1E9100662743 /* BostonianViewController.swift in Sources */,
 				007C8C06281B09840024104D /* ItalianViewController.swift in Sources */,
 				007C8C08281B09940024104D /* KoreanViewController.swift in Sources */,
 				0058F06A281A484B0086C872 /* ChineseViewController.swift in Sources */,
 				006552AB281A16CB00662743 /* SelectionViewController.swift in Sources */,
-				007C8C0C281B0D470024104D /* FoodRecViewController.swift in Sources */,
+				007C8C0C281B0D470024104D /* BosFoodRecViewController.swift in Sources */,
+				009B659F281B47A200119265 /* APIKeys.swift in Sources */,
 				006552A7281A16CB00662743 /* AppDelegate.swift in Sources */,
 				007C8C0A281B0C000024104D /* AboutViewController.swift in Sources */,
 				006552A9281A16CB00662743 /* SceneDelegate.swift in Sources */,
@@ -310,6 +382,7 @@
 		};
 		006552B8281A16CC00662743 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 225F2F2C874CB00A2A5EF9C3 /* Pods-4FoodieByFoodie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -338,6 +411,7 @@
 		};
 		006552B9281A16CC00662743 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DE2A6331C4EB736258F7BF7 /* Pods-4FoodieByFoodie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -140,7 +140,8 @@ class ChineseViewController: UIViewController {
         gameStatusMessageLabel.text = "You've Made \(guessCount) \(guesses)."
         
         if wordBeingRevealedLabel.text!.contains("_") == false { // THIS IS WHERE WE TRANSITION TO MAPVIEW
-            gameStatusMessageLabel.text = "You've Guessed It! It took you \(guessCount) guesses to guess the word."
+            performSegue(withIdentifier: "ShowChineseFoodRec", sender: nil)
+            // gameStatusMessageLabel.text = "You've Guessed It! It took you \(guessCount) guesses to guess the word."
             wordsGuessedCount += 1
             updateAfterWinOrLose()
         } else if wrongGuessesRemaining == 0 {

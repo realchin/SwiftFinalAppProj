@@ -19,7 +19,7 @@ class BostonianViewController: UIViewController {
     @IBOutlet weak var gameStatusMessageLabel: UILabel!
     @IBOutlet weak var bostonianImageView: UIImageView!
     
-    var foodsToGuess = ["CLAMCHOWDER", "LOBSTERROLL", "ROLL"] // uppercase.../ txt file? pull from it
+    var foodsToGuess = ["ROLL", "CLAMCHOWDER", "LOBSTERROLL"] // uppercase.../ txt file? pull from it
     var currentFoodIndex = 0
     var foodToGuess = ""
     var lettersGuessed = ""
@@ -98,6 +98,7 @@ class BostonianViewController: UIViewController {
         gameStatusMessageLabel.text = "You've Made \(guessCount) \(guesses)."
         
         if foodBeingRevealedLabel.text!.contains("_") == false { // THIS IS WHERE WE TRANSITION TO MAPVIEW
+            performSegue(withIdentifier: "ShowBostonianRec", sender: nil)
             gameStatusMessageLabel.text = "You've Guessed It! It took you \(guessCount) guesses to guess the word."
             foodsGuessedCount += 1
             updateAfterWinOrLose()
