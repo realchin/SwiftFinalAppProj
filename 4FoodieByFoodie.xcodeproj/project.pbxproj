@@ -83,10 +83,10 @@
 		006552A5281A16CB00662743 /* 4FoodieByFoodie */ = {
 			isa = PBXGroup;
 			children = (
+				009B659E281B47A200119265 /* APIKeys.swift */,
 				006552A6281A16CB00662743 /* AppDelegate.swift */,
 				006552A8281A16CB00662743 /* SceneDelegate.swift */,
 				006552AA281A16CB00662743 /* SelectionViewController.swift */,
-				009B659E281B47A200119265 /* APIKeys.swift */,
 				007C8C09281B0C000024104D /* AboutViewController.swift */,
 				006552BA281A1E9100662743 /* BostonianViewController.swift */,
 				0058F069281A484B0086C872 /* ChineseViewController.swift */,

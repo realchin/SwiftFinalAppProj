@@ -123,13 +123,7 @@ class KoreanViewController: UIViewController {
         
         formatRevealedWord()
         drawCFoodAndPlaySound(currentLetterGuessed: currentLetterGuessed)
-        
-        if wordToGuess.contains(currentLetterGuessed) == false {
-            wrongGuessesRemaining = wrongGuessesRemaining - 1
-            flowerImageView.image = UIImage(named: "flower\(wrongGuessesRemaining)")
-        }
-        
-        
+
         guessCount += 1
         
         let guesses = (guessCount == 1 ? "Guess" : "Guesses") // using ternary op; less code

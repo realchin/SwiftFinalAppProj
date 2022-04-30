@@ -25,8 +25,8 @@ class BostonianViewController: UIViewController {
     var currentWordIndex = 0
     var wordToGuess = ""
     var lettersGuessed = ""
-    let maxNumOfWrongGuesses = 8 // num of images needed
-    var wrongGuessesRemaining = 8
+    let maxNumOfWrongGuesses = 5 // num of images needed
+    var wrongGuessesRemaining = 5
     var wordsGuessedCount = 0
     var wordsMissedCount = 0
     var guessCount = 0
@@ -43,19 +43,6 @@ class BostonianViewController: UIViewController {
         updateGameStatusLabels()
     }
     
-    func playSound(name: String){
-        if let sound = NSDataAsset(name: name){
-            do {
-                try audioPlayer = AVAudioPlayer(data: sound.data)
-                audioPlayer.play()
-            } catch {
-                print("ERROR!")
-            }
-        } else {
-            print("ERROR!")
-        }
-    }
-    
     func updateUIAfterGuess() {
         guessedLetterTextField.resignFirstResponder()
         guessedLetterTextField.text! = ""
@@ -65,16 +52,19 @@ class BostonianViewController: UIViewController {
     
     func formatRevealedWord() {
         var revealedWord = ""
-        
+
+        // loop through all letters in wordToGuess
         for letter in wordToGuess {
-            
+            // check if letter in wordToGuess is in lettersGuessed (i.e. did you guess this letter already?)
             if lettersGuessed.contains(letter) {
-                revealedWord = revealedWord + "\(letter)"
+                // if so, add this letter + a blank space, to revealedWord
+                revealedWord = revealedWord + "\(letter) "
             } else {
+                // if not, add an underscore + a blank space, to revealedWord
                 revealedWord = revealedWord + "_ "
             }
         }
-        
+        // remove the extra space at the end of revealedWord
         revealedWord.removeLast()
         wordBeingRevealedLabel.text = revealedWord
     }
@@ -106,14 +96,12 @@ class BostonianViewController: UIViewController {
                     } else {
                         self.playSound(name: "word-not-guessed")
                         UIView.transition(with: self.flowerImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.flowerImageView.image = UIImage(named: "flower\(self.wrongGuessesRemaining)")}, completion: nil)
+                        }
+                    
+                    
                     }
-                    
-                    
-                }
-                
                 self.playSound(name: "incorrect")
             }
-            
         } else {
             playSound(name: "correct")
         }
@@ -126,31 +114,48 @@ class BostonianViewController: UIViewController {
         formatRevealedWord()
         drawCFoodAndPlaySound(currentLetterGuessed: currentLetterGuessed)
         
-        if wordToGuess.contains(currentLetterGuessed) == false {
-            wrongGuessesRemaining = wrongGuessesRemaining - 1
-            flowerImageView.image = UIImage(named: "flower\(wrongGuessesRemaining)")
-        }
-        
-        
         guessCount += 1
         
         let guesses = (guessCount == 1 ? "Guess" : "Guesses") // using ternary op; less code
         gameStatusMessageLabel.text = "You've Made \(guessCount) \(guesses)."
         
         if wordBeingRevealedLabel.text!.contains("_") == false { // THIS IS WHERE WE TRANSITION TO MAPVIEW
-            performSegue(withIdentifier: "ShowBostonianFoodRec", sender: nil)
             wordsGuessedCount += 1
             updateAfterWinOrLose()
+            gameStatusMessageLabel.text = "Good Job! Now check out some Bostonian Foods!"
+            guessLetterButton.isHidden = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 7.0, execute: {
+                self.performSegue(withIdentifier: "ShowBostonianFoodRec", sender: nil)
+            })
+            
         } else if wrongGuessesRemaining == 0 {
-            gameStatusMessageLabel.text = "So sorry. You are all out of guesses."
+            gameStatusMessageLabel.text = "You are all out of guesses! However, don't fret! Do check out some Bostonian foods!"
             wordsMissedCount += 1
             updateAfterWinOrLose()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 10.0, execute: {
+                self.performSegue(withIdentifier: "ShowBostonianFoodRec", sender: nil)
+            })
         }
         
-        if currentWordIndex == bosWordsToGuess.count {
-            gameStatusMessageLabel.text! += "\n\nYou've tried all of the words! Restart from the beginning?"
+//        if currentWordIndex == bosWordsToGuess.count {
+//            gameStatusMessageLabel.text! += "\n\nYou've tried all of the words! Restart from the beginning?"
+//        } // this will never happen 
+    }
+    
+    func playSound(name: String){
+        if let sound = NSDataAsset(name: name){
+            do {
+                try audioPlayer = AVAudioPlayer(data: sound.data)
+                audioPlayer.play()
+            } catch {
+                print("ERROR!")
+            }
+        } else {
+            print("ERROR!")
         }
     }
+    
+    
     @IBAction func doneKeyPressed(_ sender: UITextField) {
         guessALetter()
         
@@ -170,6 +175,7 @@ class BostonianViewController: UIViewController {
         
         updateUIAfterGuess()
     }
+    
     @IBAction func playAgainButtonPressed(_ sender: UIButton) {
         if currentWordIndex == wordToGuess.count {
             currentWordIndex = 0
@@ -179,7 +185,7 @@ class BostonianViewController: UIViewController {
         
         playAgainButton.isHidden = true
         guessedLetterTextField.isEnabled = true
-        guessLetterButton.isEnabled = false
+        guessLetterButton.isEnabled = false // doesn't turn true until a char is in the text field
         wordToGuess = bosWordsToGuess[currentWordIndex]
         wrongGuessesRemaining = maxNumOfWrongGuesses
         wordBeingRevealedLabel.text = "_" + String(repeating: " _", count: wordToGuess.count-1)

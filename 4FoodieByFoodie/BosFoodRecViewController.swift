@@ -39,10 +39,13 @@ class BosFoodRecViewController: UIViewController {
     ]
     
     func createBosLocations(locations: [[String : Any]]) {
+        
         for location in locations {
             let annotations = MKPointAnnotation()
             annotations.title = location["title"] as? String
             annotations.coordinate = CLLocationCoordinate2D(latitude: location["latitude"] as! CLLocationDegrees, longitude: location["longitude"] as! CLLocationDegrees)
+            let region = MKCoordinateRegion(center: annotations.coordinate, latitudinalMeters: 3000, longitudinalMeters: 2500)
+            bosMapView.setRegion(region, animated: true)
             bosMapView.addAnnotation(annotations)
         }
     }
