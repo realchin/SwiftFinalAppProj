@@ -178,7 +178,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
                         <constraints>
                             <constraint firstItem="5xB-jV-gQz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="GIH-3H-AGP"/>
                             <constraint firstItem="vG6-do-9O7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YKi-jR-X78"/>
@@ -208,7 +208,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tRg-lo-aIQ">
-                                <rect key="frame" x="20" y="88" width="369" height="114"/>
+                                <rect key="frame" x="20" y="88" width="369" height="96"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foods Guessed: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rE3-FW-jUC">
                                         <rect key="frame" x="0.0" y="0.0" width="213" height="50"/>
@@ -216,7 +216,7 @@
                                             <constraint firstAttribute="height" constant="50" id="nE2-7K-NeB"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bostonFood" translatesAutoresizingMaskIntoConstraints="NO" id="L2N-AE-4HV">
@@ -237,22 +237,22 @@
                                     <constraint firstAttribute="height" constant="50" id="ue4-Wg-Wih"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom, nom, nom. How Many Guesses Till Chowdah Time?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oN8-Cj-a9X">
-                                <rect key="frame" x="20" y="210" width="369" height="86"/>
+                                <rect key="frame" x="20" y="192" width="369" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="oN8-Cj-a9X" secondAttribute="height" multiplier="369:86" id="4Dv-W4-fAi"/>
                                     <constraint firstAttribute="width" constant="369" id="Lec-kh-jqv"/>
                                     <constraint firstAttribute="height" constant="86" id="pSb-Rb-e2f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1O8-7N-sO3">
-                                <rect key="frame" x="20" y="304" width="369" height="29"/>
+                                <rect key="frame" x="20" y="286" width="369" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="1O7-uj-bQA"/>
                                     <constraint firstAttribute="width" secondItem="1O8-7N-sO3" secondAttribute="height" multiplier="369:29" id="XNW-Qm-nua"/>
@@ -263,10 +263,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower8" translatesAutoresizingMaskIntoConstraints="NO" id="yBz-is-hUy">
-                                <rect key="frame" x="0.0" y="499" width="409" height="363"/>
+                                <rect key="frame" x="0.0" y="481" width="409" height="381"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpg-Nm-bwq">
-                                <rect key="frame" x="112.5" y="341" width="184" height="30"/>
+                                <rect key="frame" x="112.5" y="323" width="184" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fZU-dS-PYb">
                                         <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
@@ -296,7 +296,7 @@
                                 </subviews>
                             </stackView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybu-NJ-8Qi">
-                                <rect key="frame" x="159.5" y="379" width="90" height="30"/>
+                                <rect key="frame" x="159.5" y="361" width="90" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="eVC-RJ-OJd"/>
                                     <constraint firstAttribute="height" constant="30" id="u4d-dY-sAX"/>
@@ -308,19 +308,18 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've Made Zero Guesses" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vg1-vs-N4J">
-                                <rect key="frame" x="16" y="417" width="377" height="74"/>
+                                <rect key="frame" x="16" y="399" width="377" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="74" id="egr-6Y-2b1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Cps-7o-Zgr"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="oN8-Cj-a9X" firstAttribute="top" secondItem="UcV-Zr-coR" secondAttribute="bottom" constant="26" id="0fU-dO-zjc"/>
                             <constraint firstItem="1O8-7N-sO3" firstAttribute="leading" secondItem="Cps-7o-Zgr" secondAttribute="leading" constant="20" id="1Kl-Jm-nV4"/>
                             <constraint firstItem="UcV-Zr-coR" firstAttribute="leading" secondItem="tRg-lo-aIQ" secondAttribute="leading" id="3oT-Ie-1Sb"/>
                             <constraint firstItem="1O8-7N-sO3" firstAttribute="top" secondItem="oN8-Cj-a9X" secondAttribute="bottom" constant="8" id="76V-kq-aeD"/>
@@ -462,7 +461,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xi7-ce-ozp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="DGT-qE-GHj" firstAttribute="top" secondItem="xi7-ce-ozp" secondAttribute="top" id="bOO-gB-5xC"/>
                             <constraint firstItem="xi7-ce-ozp" firstAttribute="bottom" secondItem="DGT-qE-GHj" secondAttribute="bottom" id="pz0-Qc-fiB"/>
@@ -510,22 +509,27 @@
                                         <rect key="frame" x="54" y="8" width="307" height="79"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="64"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About the food" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ia0-Yq-MAs">
-                                        <rect key="frame" x="8" y="101" width="398" height="189"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ia0-Yq-MAs">
+                                        <rect key="frame" x="8" y="101" width="398" height="321"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <string key="text">As much as we are constanly spoiled by the fantastic, Michelin-grade dishes that BC Dining chefs whip up for us on a daily basis (note: BC is ranked 7th in the nation, 2018), we should take a break here and there to try out the diverse range of cuisines that are at our fingertips out in Greater Boston area. Just step right outside onto Comm Ave. Look to your left and to your right. Whichever direction you take will no doubt satisfy your tastebuds. Let's go!</string>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aboutPic1" translatesAutoresizingMaskIntoConstraints="NO" id="fyk-Dg-9aK">
+                                        <rect key="frame" x="8" y="430" width="398" height="324"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Yxc-fI-1op"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Gkt-58-CMI" firstAttribute="bottom" secondItem="Yxc-fI-1op" secondAttribute="bottom" id="65q-VK-iyN"/>
                             <constraint firstItem="Gkt-58-CMI" firstAttribute="trailing" secondItem="Yxc-fI-1op" secondAttribute="trailing" id="9iY-lr-Aha"/>
@@ -539,7 +543,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IhD-U2-qGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="-654"/>
+            <point key="canvasLocation" x="928.98550724637687" y="-654.24107142857144"/>
         </scene>
         <!--Korean View Controller-->
         <scene sceneID="9P6-WT-MMQ">
@@ -549,16 +553,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foods Guessed: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV9-fD-rrg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foods Guessed: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV9-fD-rrg">
                                 <rect key="frame" x="20" y="48" width="230" height="21"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foods Missed: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9s-aV-pSa">
-                                <rect key="frame" x="20" y="106" width="136.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foods Missed: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9s-aV-pSa">
+                                <rect key="frame" x="20" y="106" width="194" height="21"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chogi, chogi, chogi. How Many Guesses Till Banchan Time?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZz-AJ-7AJ">
@@ -567,7 +571,7 @@
                                     <constraint firstAttribute="height" constant="86" id="y1R-gD-hRN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOm-8X-7X2">
@@ -621,7 +625,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've Made Zero Guesses" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydh-9C-Ow0">
                                 <rect key="frame" x="107" y="394" width="200.5" height="50"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FAX-ab-cvT">
@@ -630,7 +634,7 @@
                                     <constraint firstAttribute="height" constant="410" id="HsY-Gi-RDd"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="koreanFood" translatesAutoresizingMaskIntoConstraints="NO" id="VmQ-Ak-Emo">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="koreanFood" translatesAutoresizingMaskIntoConstraints="NO" id="VmQ-Ak-Emo">
                                 <rect key="frame" x="222" y="44" width="172" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="6u6-of-6pQ"/>
@@ -639,7 +643,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dK1-vA-DPB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="FSa-ew-WZj" firstAttribute="leading" secondItem="dK1-vA-DPB" secondAttribute="leading" constant="159" id="1aW-p6-9L0"/>
                             <constraint firstItem="VmQ-Ak-Emo" firstAttribute="leading" secondItem="S9s-aV-pSa" secondAttribute="trailing" constant="8" symbolic="YES" id="1r2-V9-MLf"/>
@@ -648,6 +652,7 @@
                             <constraint firstItem="FSa-ew-WZj" firstAttribute="top" secondItem="Y9F-KT-CMU" secondAttribute="bottom" constant="8" symbolic="YES" id="9CD-mS-tge"/>
                             <constraint firstItem="NZz-AJ-7AJ" firstAttribute="trailing" secondItem="FAX-ab-cvT" secondAttribute="trailing" id="9am-qu-iyJ"/>
                             <constraint firstItem="Ydh-9C-Ow0" firstAttribute="top" secondItem="FSa-ew-WZj" secondAttribute="bottom" constant="8" symbolic="YES" id="EhM-4D-ThV"/>
+                            <constraint firstItem="dK1-vA-DPB" firstAttribute="trailing" secondItem="VmQ-Ak-Emo" secondAttribute="trailing" constant="20" id="G1a-ME-S9n"/>
                             <constraint firstItem="NZz-AJ-7AJ" firstAttribute="centerX" secondItem="Ydh-9C-Ow0" secondAttribute="centerX" id="GGE-1R-z8v"/>
                             <constraint firstItem="HV9-fD-rrg" firstAttribute="leading" secondItem="F4C-3g-AWo" secondAttribute="leadingMargin" id="HB8-Xa-7ef"/>
                             <constraint firstItem="HV9-fD-rrg" firstAttribute="top" secondItem="dK1-vA-DPB" secondAttribute="top" constant="4" id="IT5-FM-hWh"/>
@@ -692,10 +697,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foods Guessed: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJQ-Gu-1Rm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foods Guessed: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJQ-Gu-1Rm">
                                 <rect key="frame" x="20" y="48" width="230" height="21"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="italianFood" translatesAutoresizingMaskIntoConstraints="NO" id="NUx-ME-ik7">
@@ -708,7 +713,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tsk, tsk, tsk. How Many Guesses Till Pasto Time?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1k-b6-LV7">
                                 <rect key="frame" x="20" y="160" width="369" height="58"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vM-pA-zeT">
@@ -731,19 +736,19 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've Made Zero Guesses" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKy-ac-tRN">
                                 <rect key="frame" x="22" y="364" width="370" height="18.5"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VA6-Pm-dXc">
                                 <rect key="frame" x="0.0" y="390.5" width="414" height="471.5"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foods Missed: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5q-7m-eye">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foods Missed: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5q-7m-eye">
                                 <rect key="frame" x="20" y="77" width="220" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7bA-CV-RyW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ySu-KV-vUz">
@@ -774,7 +779,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T39-gP-wlb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="VA6-Pm-dXc" firstAttribute="bottom" secondItem="T39-gP-wlb" secondAttribute="bottom" id="2Vm-2S-cxq"/>
                             <constraint firstItem="pJQ-Gu-1Rm" firstAttribute="leading" secondItem="T39-gP-wlb" secondAttribute="leading" constant="20" id="5Mx-bm-iyA"/>
@@ -794,7 +799,6 @@
                             <constraint firstItem="zby-Ec-6KZ" firstAttribute="leading" secondItem="T39-gP-wlb" secondAttribute="leading" constant="159" id="g0w-LJ-4Kz"/>
                             <constraint firstItem="5vM-pA-zeT" firstAttribute="leading" secondItem="T39-gP-wlb" secondAttribute="leading" constant="22" id="hKu-om-MsY"/>
                             <constraint firstItem="T39-gP-wlb" firstAttribute="trailing" secondItem="eKy-ac-tRN" secondAttribute="trailing" constant="22" id="idp-Ez-MbN"/>
-                            <constraint firstItem="VA6-Pm-dXc" firstAttribute="top" secondItem="eKy-ac-tRN" secondAttribute="bottom" constant="8" symbolic="YES" id="ihB-RU-nxQ"/>
                             <constraint firstItem="H1k-b6-LV7" firstAttribute="top" secondItem="X5q-7m-eye" secondAttribute="bottom" constant="33" id="ivZ-3k-54V"/>
                             <constraint firstItem="VA6-Pm-dXc" firstAttribute="trailing" secondItem="T39-gP-wlb" secondAttribute="trailing" id="jfn-yX-KsU"/>
                             <constraint firstItem="T39-gP-wlb" firstAttribute="trailing" secondItem="zby-Ec-6KZ" secondAttribute="trailing" constant="164" id="nYI-Ea-m0L"/>
@@ -803,6 +807,7 @@
                             <constraint firstItem="T39-gP-wlb" firstAttribute="trailing" secondItem="NUx-ME-ik7" secondAttribute="trailing" constant="20" id="qb9-Ff-72S"/>
                             <constraint firstItem="H1k-b6-LV7" firstAttribute="leading" secondItem="T39-gP-wlb" secondAttribute="leading" constant="20" id="udq-Mm-m2t"/>
                             <constraint firstItem="X5q-7m-eye" firstAttribute="leading" secondItem="pJQ-Gu-1Rm" secondAttribute="leading" id="v9B-zw-FDP"/>
+                            <constraint firstItem="VA6-Pm-dXc" firstAttribute="top" secondItem="eKy-ac-tRN" secondAttribute="bottom" constant="8" id="woU-xM-4nA"/>
                             <constraint firstItem="ySu-KV-vUz" firstAttribute="centerX" secondItem="TCR-mD-SyG" secondAttribute="centerX" id="xct-wD-Ako"/>
                         </constraints>
                     </view>
@@ -837,7 +842,7 @@
                                     <constraint firstAttribute="height" constant="50" id="P8X-yc-XDu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foods Missed: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xk-eU-EMs">
@@ -846,7 +851,7 @@
                                     <constraint firstAttribute="height" constant="50" id="eXv-Cw-hds"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dimsum" translatesAutoresizingMaskIntoConstraints="NO" id="xzX-88-OXK">
@@ -862,7 +867,7 @@
                                     <constraint firstAttribute="height" constant="86" id="j1d-zG-ZNy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6L5-i6-cEx">
@@ -921,7 +926,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="xGz-ca-mkc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IjF-eu-4Ps">
@@ -929,7 +934,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oC7-yr-Rjo"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Ce7-lw-V6i" firstAttribute="top" secondItem="xzX-88-OXK" secondAttribute="bottom" constant="8" id="3O0-mE-XXU"/>
                             <constraint firstItem="oC7-yr-Rjo" firstAttribute="trailing" secondItem="IjF-eu-4Ps" secondAttribute="trailing" id="3VH-W7-qSJ"/>
@@ -1090,7 +1095,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SVc-CU-1iG"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="rWB-FO-c8f" firstAttribute="leading" secondItem="SVc-CU-1iG" secondAttribute="leading" id="LjX-T7-rWG"/>
                             <constraint firstItem="SVc-CU-1iG" firstAttribute="bottom" secondItem="rWB-FO-c8f" secondAttribute="bottom" id="N5n-77-FIW"/>
@@ -1210,7 +1215,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xPU-WR-1CJ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="xPU-WR-1CJ" firstAttribute="bottom" secondItem="72I-AM-mnw" secondAttribute="bottom" id="0fa-Ke-Nij"/>
                             <constraint firstItem="72I-AM-mnw" firstAttribute="top" secondItem="xPU-WR-1CJ" secondAttribute="top" id="6tx-jK-v1V"/>
@@ -1328,7 +1333,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uHT-zQ-gHj"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="WzN-OK-ezc" firstAttribute="top" secondItem="uHT-zQ-gHj" secondAttribute="top" id="5vm-3S-xah"/>
                             <constraint firstItem="uHT-zQ-gHj" firstAttribute="bottom" secondItem="WzN-OK-ezc" secondAttribute="bottom" id="GJ0-e4-FIo"/>
@@ -1350,10 +1355,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JdS-bb-C6t"/>
-        <segue reference="ZPg-Le-z2f"/>
+        <segue reference="uPh-6P-qqh"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="aboutPic1" width="2000" height="2000"/>
         <image name="bostonFood" width="616" height="462"/>
         <image name="bostonLogo" width="1300" height="866"/>
         <image name="bostonianLabel" width="499" height="552"/>
@@ -1369,6 +1374,9 @@
         <image name="koreanLabel" width="599" height="600"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

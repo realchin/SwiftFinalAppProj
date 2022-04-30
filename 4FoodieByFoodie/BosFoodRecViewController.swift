@@ -23,7 +23,11 @@ class BosFoodRecViewController: UIViewController {
         let otherVC = BostonianViewController()
         bosWordsToGuess2 = otherVC.bosWordsToGuess
         let bosWordsToGuess2CleanedPartly = bosWordsToGuess2[0...2].description.replacingOccurrences(of: "\"", with: "").replacingOccurrences(of: "[", with: "").replacingOccurrences(of: "]", with: "")
+        
+        
         foodGuessedLabel.text = "Go out and taste the magic goodness of \(bosWordsToGuess2CleanedPartly.lowercased())"
+        
+        
         
         
         createBosLocations(locations: bosLocations)
@@ -49,21 +53,6 @@ class BosFoodRecViewController: UIViewController {
             bosMapView.addAnnotation(annotations)
         }
     }
-    
-//    func autherizeLocalNotifications() {
-//        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
-//            guard error == nil else {
-//                print("ERROR!")
-//                return
-//            }
-//            if granted {
-//                print("Notifications granted!")
-//            } else {
-//                print("Denied notifications")
-//            }
-//        }
-//    }
-    
     
     @IBAction func recButtonPressed(_ sender: UIButton) {
         
