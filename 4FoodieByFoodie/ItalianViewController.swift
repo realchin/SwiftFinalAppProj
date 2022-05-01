@@ -99,21 +99,9 @@ class ItalianViewController: UIViewController {
     func drawCFoodAndPlaySound(currentLetterGuessed: String) {
         if wordToGuess.contains(currentLetterGuessed) == false {
             wrongGuessesRemaining = wrongGuessesRemaining - 1
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-                UIView.transition(with: self.italianImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.italianImageView.image = UIImage(named: "wilt\(self.wrongGuessesRemaining)")}) { (_) in
-                    
-                    if self.wrongGuessesRemaining != 0 {
-                        self.italianImageView.image = UIImage(named: "italian\(self.wrongGuessesRemaining)")
-                    } else {
-                        self.playSound(name: "word-not-guessed")
-                        UIView.transition(with: self.italianImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.italianImageView.image = UIImage(named: "italian\(self.wrongGuessesRemaining)")}, completion: nil)
-                    }
-                    
-                    
-                }
+            italianImageView.image = UIImage(named: "italian\(wrongGuessesRemaining)")
                 self.playSound(name: "incorrect")
-            }
+            
         } else {
             playSound(name: "correct")
         }
@@ -125,7 +113,7 @@ class ItalianViewController: UIViewController {
         
         formatRevealedWord()
         drawCFoodAndPlaySound(currentLetterGuessed: currentLetterGuessed)
-
+        
         guessCount += 1
         
         let guesses = (guessCount == 1 ? "Guess" : "Guesses") // using ternary op; less code

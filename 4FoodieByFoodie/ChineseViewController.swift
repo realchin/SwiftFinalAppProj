@@ -98,21 +98,9 @@ class ChineseViewController: UIViewController {
     func drawCFoodAndPlaySound(currentLetterGuessed: String) {
         if wordToGuess.contains(currentLetterGuessed) == false {
             wrongGuessesRemaining = wrongGuessesRemaining - 1
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-                UIView.transition(with: self.chineseImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.chineseImageView.image = UIImage(named: "wilt\(self.wrongGuessesRemaining)")}) { (_) in
-                    
-                    if self.wrongGuessesRemaining != 0 {
-                        self.chineseImageView.image = UIImage(named: "dimsum\(self.wrongGuessesRemaining)")
-                    } else {
-                        self.playSound(name: "word-not-guessed")
-                        UIView.transition(with: self.chineseImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.chineseImageView.image = UIImage(named: "dimsum\(self.wrongGuessesRemaining)")}, completion: nil)
-                    }
-                    
-                    
-                }
+            chineseImageView.image = UIImage(named: "chinese\(wrongGuessesRemaining)")
                 self.playSound(name: "incorrect")
-            }
+            
         } else {
             playSound(name: "correct")
         }

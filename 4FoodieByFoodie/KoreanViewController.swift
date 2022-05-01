@@ -97,21 +97,9 @@ class KoreanViewController: UIViewController {
     func drawCFoodAndPlaySound(currentLetterGuessed: String) {
         if wordToGuess.contains(currentLetterGuessed) == false {
             wrongGuessesRemaining = wrongGuessesRemaining - 1
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-                UIView.transition(with: self.koreanImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.koreanImageView.image = UIImage(named: "wilt\(self.wrongGuessesRemaining)")}) { (_) in
-                    
-                    if self.wrongGuessesRemaining != 0 {
-                        self.koreanImageView.image = UIImage(named: "korean\(self.wrongGuessesRemaining)")
-                    } else {
-                        self.playSound(name: "word-not-guessed")
-                        UIView.transition(with: self.koreanImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.koreanImageView.image = UIImage(named: "korean\(self.wrongGuessesRemaining)")}, completion: nil)
-                    }
-                    
-                    
-                }
+            koreanImageView.image = UIImage(named: "korean\(wrongGuessesRemaining)")
                 self.playSound(name: "incorrect")
-            }
+            
         } else {
             playSound(name: "correct")
         }

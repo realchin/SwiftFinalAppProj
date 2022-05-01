@@ -25,8 +25,8 @@ class BostonianViewController: UIViewController {
     var currentWordIndex = 0
     var wordToGuess = ""
     var lettersGuessed = ""
-    let maxNumOfWrongGuesses = 5 // num of images needed
-    var wrongGuessesRemaining = 5
+    let maxNumOfWrongGuesses = 8
+    var wrongGuessesRemaining = 8
     var wordsGuessedCount = 0
     var wordsMissedCount = 0
     var guessCount = 0
@@ -53,18 +53,15 @@ class BostonianViewController: UIViewController {
     func formatRevealedWord() {
         var revealedWord = ""
 
-        // loop through all letters in wordToGuess
         for letter in wordToGuess {
-            // check if letter in wordToGuess is in lettersGuessed (i.e. did you guess this letter already?)
+    
             if lettersGuessed.contains(letter) {
-                // if so, add this letter + a blank space, to revealedWord
                 revealedWord = revealedWord + "\(letter) "
             } else {
-                // if not, add an underscore + a blank space, to revealedWord
                 revealedWord = revealedWord + "_ "
             }
         }
-        // remove the extra space at the end of revealedWord
+        
         revealedWord.removeLast()
         wordBeingRevealedLabel.text = revealedWord
     }
@@ -87,21 +84,8 @@ class BostonianViewController: UIViewController {
     func drawCFoodAndPlaySound(currentLetterGuessed: String) {
         if wordToGuess.contains(currentLetterGuessed) == false {
             wrongGuessesRemaining = wrongGuessesRemaining - 1
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-                UIView.transition(with: self.bostonImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.bostonImageView.image = UIImage(named: "wilt\(self.wrongGuessesRemaining)")}) { (_) in
-                    
-                    if self.wrongGuessesRemaining != 0 {
-                        self.bostonImageView.image = UIImage(named: "lobster\(self.wrongGuessesRemaining)")
-                    } else {
-                        self.playSound(name: "word-not-guessed")
-                        UIView.transition(with: self.bostonImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.bostonImageView.image = UIImage(named: "lobster\(self.wrongGuessesRemaining)")}, completion: nil)
-                        }
-                    
-                    
-                    }
+            bostonImageView.image = UIImage(named: "lobster\(wrongGuessesRemaining)")
                 self.playSound(name: "incorrect")
-            }
         } else {
             playSound(name: "correct")
         }
