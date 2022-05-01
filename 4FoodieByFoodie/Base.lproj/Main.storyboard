@@ -262,7 +262,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower8" translatesAutoresizingMaskIntoConstraints="NO" id="yBz-is-hUy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lobster8" translatesAutoresizingMaskIntoConstraints="NO" id="yBz-is-hUy">
                                 <rect key="frame" x="0.0" y="481" width="409" height="381"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpg-Nm-bwq">
@@ -347,7 +347,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="xN9-zc-K3b"/>
                     <connections>
-                        <outlet property="flowerImageView" destination="yBz-is-hUy" id="0ge-Ca-z9w"/>
+                        <outlet property="bostonImageView" destination="yBz-is-hUy" id="0ge-Ca-z9w"/>
                         <outlet property="gameStatusMessageLabel" destination="Vg1-vs-N4J" id="s8a-dv-2iD"/>
                         <outlet property="guessLetterButton" destination="rOa-VE-vIj" id="VuR-Qr-mG5"/>
                         <outlet property="guessedLetterTextField" destination="fZU-dS-PYb" id="so1-fh-MyZ"/>
@@ -628,7 +628,7 @@
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FAX-ab-cvT">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="korean8" translatesAutoresizingMaskIntoConstraints="NO" id="FAX-ab-cvT">
                                 <rect key="frame" x="0.0" y="452" width="414" height="410"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="410" id="HsY-Gi-RDd"/>
@@ -674,10 +674,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="ZAa-4q-rbq"/>
                     <connections>
-                        <outlet property="flowerImageView" destination="FAX-ab-cvT" id="GFh-5Q-MaI"/>
                         <outlet property="gameStatusMessageLabel" destination="Ydh-9C-Ow0" id="58Z-Vd-UQT"/>
                         <outlet property="guessLetterButton" destination="pon-yO-vJW" id="0Al-9l-rtX"/>
                         <outlet property="guessedLetterTextField" destination="zow-nU-2ZC" id="Z7n-QX-m55"/>
+                        <outlet property="koreanImageView" destination="FAX-ab-cvT" id="GFh-5Q-MaI"/>
                         <outlet property="playAgainButton" destination="FSa-ew-WZj" id="RGX-Ka-1Ik"/>
                         <outlet property="wordBeingRevealedLabel" destination="vOm-8X-7X2" id="R44-oj-qKa"/>
                         <outlet property="wordsGuessedLabel" destination="HV9-fD-rrg" id="B2P-ft-9ec"/>
@@ -710,13 +710,13 @@
                                     <constraint firstAttribute="height" constant="96" id="nt8-Q7-u8B"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tsk, tsk, tsk. How Many Guesses Till Pasto Time?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1k-b6-LV7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tsk, tsk, tsk. How Many Guesses Till Pasto Time?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1k-b6-LV7">
                                 <rect key="frame" x="20" y="160" width="369" height="58"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="25"/>
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vM-pA-zeT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="_" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vM-pA-zeT">
                                 <rect key="frame" x="22" y="226" width="369" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="Dko-uc-Rhw"/>
@@ -725,7 +725,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zby-Ec-6KZ">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zby-Ec-6KZ">
                                 <rect key="frame" x="159" y="325" width="91" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Play Again"/>
@@ -733,13 +733,13 @@
                                     <action selector="playAgainButtonPressed:" destination="vQg-Fe-JIG" eventType="touchUpInside" id="7By-Bm-lsG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've Made Zero Guesses" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKy-ac-tRN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="You've Made Zero Guesses" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKy-ac-tRN">
                                 <rect key="frame" x="22" y="364" width="370" height="18.5"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VA6-Pm-dXc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="italian8" translatesAutoresizingMaskIntoConstraints="NO" id="VA6-Pm-dXc">
                                 <rect key="frame" x="0.0" y="390.5" width="414" height="471.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foods Missed: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5q-7m-eye">
@@ -751,7 +751,7 @@
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ySu-KV-vUz">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ySu-KV-vUz">
                                 <rect key="frame" x="133" y="283" width="148" height="34"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FEk-p8-57v">
@@ -813,10 +813,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="deO-zL-76P"/>
                     <connections>
-                        <outlet property="flowerImageView" destination="VA6-Pm-dXc" id="JxV-kf-WP2"/>
                         <outlet property="gameStatusMessageLabel" destination="eKy-ac-tRN" id="9Jz-OY-wC7"/>
                         <outlet property="guessLetterButton" destination="4QZ-Qp-fD2" id="hTf-l4-EOl"/>
                         <outlet property="guessedLetterTextField" destination="FEk-p8-57v" id="HXJ-0O-h01"/>
+                        <outlet property="italianImageView" destination="VA6-Pm-dXc" id="JxV-kf-WP2"/>
                         <outlet property="playAgainButton" destination="zby-Ec-6KZ" id="jTB-di-gQR"/>
                         <outlet property="wordBeingRevealedLabel" destination="5vM-pA-zeT" id="lhy-nJ-WGm"/>
                         <outlet property="wordsGuessedLabel" destination="pJQ-Gu-1Rm" id="jHv-hX-NPS"/>
@@ -929,7 +929,7 @@
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IjF-eu-4Ps">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dimsum8" translatesAutoresizingMaskIntoConstraints="NO" id="IjF-eu-4Ps">
                                 <rect key="frame" x="0.0" y="442" width="414" height="420"/>
                             </imageView>
                         </subviews>
@@ -966,7 +966,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="xMP-QP-C5A"/>
                     <connections>
-                        <outlet property="flowerImageView" destination="IjF-eu-4Ps" id="Hdr-We-UBI"/>
+                        <outlet property="chineseImageView" destination="IjF-eu-4Ps" id="Hdr-We-UBI"/>
                         <outlet property="gameStatusMessageLabel" destination="wHN-1b-mdS" id="bBW-Me-veF"/>
                         <outlet property="guessLetterButton" destination="njY-hc-x4Q" id="gjf-Bz-drf"/>
                         <outlet property="guessedLetterTextField" destination="1tc-EX-fam" id="Qqk-3P-MvO"/>
@@ -1355,6 +1355,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="8k4-JJ-2Fu"/>
         <segue reference="uPh-6P-qqh"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -1365,13 +1366,16 @@
         <image name="chineseLabel" width="800" height="800"/>
         <image name="chineseLogo" width="800" height="533"/>
         <image name="dimsum" width="3000" height="2001"/>
-        <image name="flower8" width="613.5" height="1082"/>
+        <image name="dimsum8" width="572" height="570"/>
+        <image name="italian8" width="714" height="620"/>
         <image name="italianFood" width="1600" height="900"/>
         <image name="italianLabel" width="1300" height="1300"/>
         <image name="italyLogo" width="1000" height="667"/>
         <image name="koreaLogo" width="800" height="534"/>
+        <image name="korean8" width="474" height="430"/>
         <image name="koreanFood" width="800" height="600"/>
         <image name="koreanLabel" width="599" height="600"/>
+        <image name="lobster8" width="698" height="538"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -18,7 +18,7 @@ class BostonianViewController: UIViewController {
     @IBOutlet weak var guessLetterButton: UIButton!
     @IBOutlet weak var playAgainButton: UIButton!
     @IBOutlet weak var gameStatusMessageLabel: UILabel!
-    @IBOutlet weak var flowerImageView: UIImageView!
+    @IBOutlet weak var bostonImageView: UIImageView!
     
     var bosWordsToGuess = ["ROLL", "CLAMCHOWDER", "LOBSTERROLL", "BAKEDBEANS", "CREAMPIE", "OYSTER", "FENWAYFRANK", "ROASTBEEF", "CLAMCAKE"]
     
@@ -89,13 +89,13 @@ class BostonianViewController: UIViewController {
             wrongGuessesRemaining = wrongGuessesRemaining - 1
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-                UIView.transition(with: self.flowerImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.flowerImageView.image = UIImage(named: "wilt\(self.wrongGuessesRemaining)")}) { (_) in
+                UIView.transition(with: self.bostonImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.bostonImageView.image = UIImage(named: "wilt\(self.wrongGuessesRemaining)")}) { (_) in
                     
                     if self.wrongGuessesRemaining != 0 {
-                        self.flowerImageView.image = UIImage(named: "flower\(self.wrongGuessesRemaining)")
+                        self.bostonImageView.image = UIImage(named: "lobster\(self.wrongGuessesRemaining)")
                     } else {
                         self.playSound(name: "word-not-guessed")
-                        UIView.transition(with: self.flowerImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.flowerImageView.image = UIImage(named: "flower\(self.wrongGuessesRemaining)")}, completion: nil)
+                        UIView.transition(with: self.bostonImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.bostonImageView.image = UIImage(named: "lobster\(self.wrongGuessesRemaining)")}, completion: nil)
                         }
                     
                     
@@ -190,7 +190,7 @@ class BostonianViewController: UIViewController {
         wrongGuessesRemaining = maxNumOfWrongGuesses
         wordBeingRevealedLabel.text = "_" + String(repeating: " _", count: wordToGuess.count-1)
         guessCount = 0
-        flowerImageView.image = UIImage(named: "flower\(maxNumOfWrongGuesses)")
+        bostonImageView.image = UIImage(named: "lobster\(maxNumOfWrongGuesses)")
         lettersGuessed = ""
         updateGameStatusLabels()
         gameStatusMessageLabel.text = "You've Made Zero Guesses"

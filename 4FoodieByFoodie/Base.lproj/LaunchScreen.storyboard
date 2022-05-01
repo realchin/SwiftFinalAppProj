@@ -15,27 +15,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutPic1" translatesAutoresizingMaskIntoConstraints="NO" id="JrI-px-qP8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIconFood" translatesAutoresizingMaskIntoConstraints="NO" id="JrI-px-qP8">
                                 <rect key="frame" x="57" y="298" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="PSX-Ra-iU8"/>
                                     <constraint firstAttribute="height" constant="300" id="b4u-BT-b7s"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FoodMan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xW-6M-Lxt">
-                                <rect key="frame" x="121" y="614" width="172.5" height="44.5"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="36"/>
-                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="JrI-px-qP8" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="1yB-0v-nMV"/>
-                            <constraint firstItem="7xW-6M-Lxt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XGW-YD-rnC"/>
                             <constraint firstItem="JrI-px-qP8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="gpu-1K-OQg"/>
-                            <constraint firstItem="7xW-6M-Lxt" firstAttribute="top" secondItem="JrI-px-qP8" secondAttribute="bottom" constant="16" id="tIt-tx-25e"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -45,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="aboutPic1" width="2000" height="2000"/>
+        <image name="appIconFood" width="2000" height="2000"/>
     </resources>
 </document>

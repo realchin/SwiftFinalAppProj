@@ -18,7 +18,7 @@ class ItalianViewController: UIViewController {
     @IBOutlet weak var guessLetterButton: UIButton!
     @IBOutlet weak var playAgainButton: UIButton!
     @IBOutlet weak var gameStatusMessageLabel: UILabel!
-    @IBOutlet weak var flowerImageView: UIImageView!
+    @IBOutlet weak var italianImageView: UIImageView!
     
     
     var wordsToGuess = ["BUNS", "TIRAMISU", "PIZZA", "RISOTTO", "LASAGNA", "RAVIOLI", "TORTELLINI", "PESTO", "SPAGHETTI"]
@@ -101,13 +101,13 @@ class ItalianViewController: UIViewController {
             wrongGuessesRemaining = wrongGuessesRemaining - 1
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-                UIView.transition(with: self.flowerImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.flowerImageView.image = UIImage(named: "wilt\(self.wrongGuessesRemaining)")}) { (_) in
+                UIView.transition(with: self.italianImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.italianImageView.image = UIImage(named: "wilt\(self.wrongGuessesRemaining)")}) { (_) in
                     
                     if self.wrongGuessesRemaining != 0 {
-                        self.flowerImageView.image = UIImage(named: "flower\(self.wrongGuessesRemaining)")
+                        self.italianImageView.image = UIImage(named: "italian\(self.wrongGuessesRemaining)")
                     } else {
                         self.playSound(name: "word-not-guessed")
-                        UIView.transition(with: self.flowerImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.flowerImageView.image = UIImage(named: "flower\(self.wrongGuessesRemaining)")}, completion: nil)
+                        UIView.transition(with: self.italianImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {self.italianImageView.image = UIImage(named: "italian\(self.wrongGuessesRemaining)")}, completion: nil)
                     }
                     
                     
@@ -174,7 +174,7 @@ class ItalianViewController: UIViewController {
         wrongGuessesRemaining = maxNumberOfWrongGuesses
         wordBeingRevealedLabel.text = "_" + String(repeating: " _", count: wordToGuess.count-1)
         guessCount = 0
-        flowerImageView.image = UIImage(named: "flower\(maxNumberOfWrongGuesses)")
+        italianImageView.image = UIImage(named: "italian\(maxNumberOfWrongGuesses)")
         lettersGuessed = ""
         updateGameStatusLabels()
         gameStatusMessageLabel.text = "You've Made Zero Guesses"
