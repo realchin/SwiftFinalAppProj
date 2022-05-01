@@ -2,7 +2,7 @@
 //  BostonianViewController.swift
 //  4FoodieByFoodie
 //
-//  Created by Timothy Chin on 4/27/22.
+//  Created by Timothy Chin on 4/22/22.
 //
 
 import UIKit
@@ -108,7 +108,7 @@ class BostonianViewController: UIViewController {
             updateAfterWinOrLose()
             gameStatusMessageLabel.text = "Good Job! Now check out some Bostonian Foods!"
             guessLetterButton.isHidden = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 7.0, execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
                 self.performSegue(withIdentifier: "ShowBostonianFoodRec", sender: nil)
             })
             

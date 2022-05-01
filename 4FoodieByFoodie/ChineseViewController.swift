@@ -98,7 +98,7 @@ class ChineseViewController: UIViewController {
     func drawCFoodAndPlaySound(currentLetterGuessed: String) {
         if wordToGuess.contains(currentLetterGuessed) == false {
             wrongGuessesRemaining = wrongGuessesRemaining - 1
-            chineseImageView.image = UIImage(named: "chinese\(wrongGuessesRemaining)")
+            chineseImageView.image = UIImage(named: "dimsum\(wrongGuessesRemaining)")
                 self.playSound(name: "incorrect")
             
         } else {
