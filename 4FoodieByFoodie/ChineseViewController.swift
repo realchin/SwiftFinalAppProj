@@ -21,7 +21,7 @@ class ChineseViewController: UIViewController {
     @IBOutlet weak var gameStatusMessageLabel: UILabel!
     @IBOutlet weak var chineseImageView: UIImageView!
     
-    var wordsToGuess = ["CHARSIUBAO", "WUGOK", "LOMAIGAI", "XIAOLONGBAO", "GUOTIE", "BOLONAIWONGBAO", "SIUMAI", "FENGZHAO"]
+    var wordsToGuess = ["DIMSUM", "CHARSIUBAO", "WUGOK", "LOMAIGAI", "XIAOLONGBAO", "GUOTIE", "BOLONAIWONGBAO", "SIUMAI", "FENGZHAO", "DUMPLING", "MAPOTOFU"]
     
     var currentWordIndex = 0
     var wordToGuess = ""
@@ -66,11 +66,11 @@ class ChineseViewController: UIViewController {
     
     func formatRevealedWord() {
         var revealedWord = ""
-        
+
         for letter in wordToGuess {
-            
+    
             if lettersGuessed.contains(letter) {
-                revealedWord = revealedWord + "\(letter)"
+                revealedWord = revealedWord + "\(letter) "
             } else {
                 revealedWord = revealedWord + "_ "
             }

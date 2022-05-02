@@ -20,7 +20,7 @@ class KoreanViewController: UIViewController {
     @IBOutlet weak var gameStatusMessageLabel: UILabel!
     @IBOutlet weak var koreanImageView: UIImageView!
     
-    var wordsToGuess = ["KIMCHI", "BIMBIMBAP", "TTEOKBOKKI", "BULGOGI", "JJIGAE", "JAJANGMYEON", "SAMGYETANG", "RAMYUN"]
+    var wordsToGuess = ["KIMCHI", "BIMBIMBAP", "TTEOKBOKKI", "BULGOGI", "JJIGAE", "JAJANGMYEON", "SAMGYETANG", "RAMYUN", "DDUKBOKKI"]
     
     var currentWordIndex = 0
     var wordToGuess = ""
@@ -65,11 +65,11 @@ class KoreanViewController: UIViewController {
     
     func formatRevealedWord() {
         var revealedWord = ""
-        
+
         for letter in wordToGuess {
-            
+    
             if lettersGuessed.contains(letter) {
-                revealedWord = revealedWord + "\(letter)"
+                revealedWord = revealedWord + "\(letter) "
             } else {
                 revealedWord = revealedWord + "_ "
             }

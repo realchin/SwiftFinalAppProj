@@ -21,7 +21,7 @@ class ItalianViewController: UIViewController {
     @IBOutlet weak var italianImageView: UIImageView!
     
     
-    var wordsToGuess = ["TIRAMISU", "PIZZA", "RISOTTO", "LASAGNA", "RAVIOLI", "TORTELLINI", "PESTO", "SPAGHETTI"]
+    var wordsToGuess = ["TIRAMISU", "PIZZA", "RISOTTO", "LASAGNA", "RAVIOLI", "TORTELLINI", "PESTO", "SPAGHETTI", "LINGUINE", "PASTA", "FETTUCCINE", "SHRIMPSCAMPI", "CANNOLI"]
     
     var currentWordIndex = 0
     var wordToGuess = ""
@@ -67,11 +67,11 @@ class ItalianViewController: UIViewController {
     
     func formatRevealedWord() {
         var revealedWord = ""
-        
+
         for letter in wordToGuess {
-            
+    
             if lettersGuessed.contains(letter) {
-                revealedWord = revealedWord + "\(letter)"
+                revealedWord = revealedWord + "\(letter) "
             } else {
                 revealedWord = revealedWord + "_ "
             }

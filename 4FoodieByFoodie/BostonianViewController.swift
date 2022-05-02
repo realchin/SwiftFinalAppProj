@@ -20,7 +20,7 @@ class BostonianViewController: UIViewController {
     @IBOutlet weak var gameStatusMessageLabel: UILabel!
     @IBOutlet weak var bostonImageView: UIImageView!
     
-    var bosWordsToGuess = ["CLAMCHOWDER", "LOBSTERROLL", "BAKEDBEANS", "CREAMPIE", "OYSTER", "FENWAYFRANK", "ROASTBEEF", "CLAMCAKE"]
+    var bosWordsToGuess = ["CLAMCHOWDER", "LOBSTERROLL", "LOBSTERBISQUE", "BAKEDBEANS", "OYSTER", "FENWAYFRANK", "ROASTBEEF", "CLAMCAKE"]
     
     var currentWordIndex = 0
     var wordToGuess = ""

@@ -12,7 +12,6 @@ class AboutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
     }
 
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {

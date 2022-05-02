@@ -22,6 +22,7 @@
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="xF7-c6-iGb"/>
                                     <barButtonItem title="About" id="Cbx-Mn-uxZ">
+                                        <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="bMi-RM-C3U" kind="presentation" id="XQx-Ms-Gln"/>
                                         </connections>
@@ -256,7 +257,7 @@
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1O8-7N-sO3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1O8-7N-sO3">
                                 <rect key="frame" x="20" y="286" width="369" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="1O7-uj-bQA"/>
@@ -267,8 +268,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lobster8" translatesAutoresizingMaskIntoConstraints="NO" id="yBz-is-hUy">
-                                <rect key="frame" x="0.0" y="481" width="409" height="381"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lobster8" translatesAutoresizingMaskIntoConstraints="NO" id="yBz-is-hUy">
+                                <rect key="frame" x="0.0" y="481" width="409" height="304"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpg-Nm-bwq">
                                 <rect key="frame" x="112.5" y="323" width="184" height="30"/>
@@ -325,6 +326,21 @@
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="35w-Ap-e4e">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="7fq-5T-ESF"/>
+                                    <barButtonItem title="Return to Cuisine Selection" id="WqN-yT-aNm">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="JQr-6k-ILL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QdG-g0-FZE"/>
+                                </items>
+                                <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Cps-7o-Zgr"/>
                         <color key="backgroundColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -349,7 +365,6 @@
                             <constraint firstItem="yBz-is-hUy" firstAttribute="leading" secondItem="Cps-7o-Zgr" secondAttribute="leading" id="hgv-H1-3fo"/>
                             <constraint firstItem="fpg-Nm-bwq" firstAttribute="leading" secondItem="Cps-7o-Zgr" secondAttribute="leading" constant="112.5" id="hu9-uf-P7k"/>
                             <constraint firstItem="yBz-is-hUy" firstAttribute="top" secondItem="Vg1-vs-N4J" secondAttribute="bottom" constant="8" id="i7l-9P-kuY"/>
-                            <constraint firstItem="yBz-is-hUy" firstAttribute="bottom" secondItem="Cps-7o-Zgr" secondAttribute="bottom" id="jdn-fG-FVT"/>
                             <constraint firstAttribute="trailing" secondItem="yBz-is-hUy" secondAttribute="trailing" id="mTS-MN-EvH"/>
                             <constraint firstItem="oN8-Cj-a9X" firstAttribute="leading" secondItem="Cps-7o-Zgr" secondAttribute="leading" constant="20" id="mXb-E9-bO9"/>
                             <constraint firstItem="UcV-Zr-coR" firstAttribute="top" secondItem="Cps-7o-Zgr" secondAttribute="top" constant="90" id="nQy-nU-1i5"/>
@@ -388,6 +403,7 @@
                                 <subviews>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blR-Fm-8js">
                                         <rect key="frame" x="0.0" y="741" width="414" height="49"/>
+                                        <color key="backgroundColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <items>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="p5e-L2-Ru4"/>
                                             <barButtonItem title="Return to Cuisine Selection" style="plain" id="nOU-2w-3Zn">
@@ -408,7 +424,7 @@
                                             <constraint firstAttribute="width" secondItem="3GT-Py-N8G" secondAttribute="height" multiplier="159:49" id="yuq-89-bMd"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="dynamic">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Tap Me to Learn More About the Restaurants">
                                                     <attributes>
@@ -432,7 +448,7 @@
                                             <constraint firstAttribute="width" constant="155" id="Pv4-a4-a9C"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="dynamic">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Tap Me to Reveal All Possible Food Guesses">
                                                     <attributes>
@@ -456,18 +472,18 @@
                                             <constraint firstAttribute="width" secondItem="LCY-Yy-XNR" secondAttribute="height" multiplier="199:149" id="ySf-yi-HlL"/>
                                         </constraints>
                                     </mapView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCc-aI-vEI">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qCc-aI-vEI">
                                         <rect key="frame" x="8" y="148" width="398" height="295"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="295" id="9kO-FY-bka"/>
                                             <constraint firstAttribute="width" constant="398" id="oeP-Hm-Etl"/>
                                         </constraints>
                                         <attributedString key="attributedText">
-                                            <fragment content="Are You Ready to Eat?">
+                                            <fragment content="Are You Ready to Eat? If So, Tap the Top Right Button!">
                                                 <attributes>
                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <font key="NSFont" size="18" name="AmericanTypewriter"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -560,46 +576,66 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fls-fW-xdb">
                                 <rect key="frame" x="0.0" y="44" width="414" height="754"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FoodMan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmS-fc-faR">
-                                        <rect key="frame" x="53.5" y="8" width="307" height="79"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="307" id="Vvj-Mk-qZL"/>
-                                            <constraint firstAttribute="height" constant="79" id="hxP-0q-Uvb"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="64"/>
-                                        <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ia0-Yq-MAs">
-                                        <rect key="frame" x="8" y="101" width="398" height="321"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="321" id="SoY-K4-xxY"/>
-                                            <constraint firstAttribute="width" constant="398" id="wXl-Mj-y73"/>
-                                        </constraints>
-                                        <string key="text">As much as we are constanly spoiled by the fantastic, Michelin-grade dishes that BC Dining chefs whip up for us on a daily basis (note: BC is ranked 7th in the nation, 2018), we should take a break here and there to try out the diverse range of cuisines that are at our fingertips out in the Greater Boston area. Just step right outside onto Comm Ave. Look to your left and to your right. Whichever direction you take will no doubt satisfy your tastebuds. Let's go!</string>
-                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIconFood" translatesAutoresizingMaskIntoConstraints="NO" id="fyk-Dg-9aK">
-                                        <rect key="frame" x="8" y="430" width="398" height="324"/>
+                                        <rect key="frame" x="8" y="4" width="385" height="208"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="fyk-Dg-9aK" secondAttribute="height" multiplier="199:162" id="1gw-iM-JeL"/>
-                                            <constraint firstAttribute="width" constant="398" id="Swn-Y5-r9o"/>
-                                            <constraint firstAttribute="height" constant="324" id="Wdm-M8-7P3"/>
+                                            <constraint firstAttribute="height" constant="208" id="9Jp-ry-WFU"/>
+                                            <constraint firstAttribute="width" constant="385" id="g1X-6m-HTd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Ia0-Yq-MAs">
+                                        <rect key="frame" x="8" y="216" width="398" height="405"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="398" id="uNP-xg-Ffo"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <mutableString key="content">Hi! My name is FoodMan. You might know me from the reality tv show “The Food Evangelist” or even my brief stint on the game show “Food Feud.” Yeah, I’m quite the celebrity foodie. Now during my spare time, I help head the dining services at Boston College. They call me the sensei around this part of town. I’m a big reason why BC Dining was ranked 7th in the nation in 2018. We got great food here, and in no way am I denying that. And shoutout to Michelle, Sharon, and the rest of the gang. Y’all the embodiment of hospitality. But you know what? We also have a vast, diverse, tiger-tastic, yummy array of cuisines throughout the Greater Boston area. During your time at BC, I want y’all to break out of the BC Bubble for the better. And that’s why I, FoodMan, coded this dank app. Go out there, right onto Comm Ave, spin the compass, pick a cardinal direction, and get to it. And remember to play this FoodMan game to get some rest recs. BC Dining and I will be waiting for you when you get back. To foodie vibes and beyond. Soar, Eagles!
+</mutableString>
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="18" name="AmericanTypewriter"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appleMaps" translatesAutoresizingMaskIntoConstraints="NO" id="2yb-4z-gFX">
+                                        <rect key="frame" x="8" y="629" width="195" height="117"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="195" id="ccl-PN-sWS"/>
+                                            <constraint firstAttribute="height" constant="117" id="hEm-dP-WqP"/>
+                                            <constraint firstAttribute="width" secondItem="2yb-4z-gFX" secondAttribute="height" multiplier="5:3" id="p6Q-op-Q8k"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="googleReviews" translatesAutoresizingMaskIntoConstraints="NO" id="HWZ-5o-cYX">
+                                        <rect key="frame" x="211" y="629" width="195" height="117"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="195" id="4As-tJ-flV"/>
+                                            <constraint firstAttribute="width" secondItem="HWZ-5o-cYX" secondAttribute="height" multiplier="5:3" id="9L5-ET-QSD"/>
+                                            <constraint firstAttribute="height" constant="117" id="wat-hs-yWw"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Ia0-Yq-MAs" secondAttribute="trailing" constant="8" id="7hP-we-aV3"/>
-                                    <constraint firstItem="JmS-fc-faR" firstAttribute="centerX" secondItem="fls-fW-xdb" secondAttribute="centerX" id="CLD-Lj-n17"/>
-                                    <constraint firstItem="Ia0-Yq-MAs" firstAttribute="leading" secondItem="fls-fW-xdb" secondAttribute="leading" constant="8" id="F02-K6-L9i"/>
-                                    <constraint firstItem="fyk-Dg-9aK" firstAttribute="leading" secondItem="fls-fW-xdb" secondAttribute="leading" constant="8" id="R3Z-1C-c3p"/>
-                                    <constraint firstItem="JmS-fc-faR" firstAttribute="top" secondItem="fls-fW-xdb" secondAttribute="top" constant="8" id="YyZ-Vp-dJR"/>
-                                    <constraint firstItem="Ia0-Yq-MAs" firstAttribute="top" secondItem="JmS-fc-faR" secondAttribute="bottom" constant="14" id="anN-Xs-kMe"/>
-                                    <constraint firstItem="fyk-Dg-9aK" firstAttribute="top" secondItem="Ia0-Yq-MAs" secondAttribute="bottom" constant="8" id="eQQ-2m-UvG"/>
-                                    <constraint firstAttribute="trailing" secondItem="fyk-Dg-9aK" secondAttribute="trailing" constant="8" id="yHu-Eq-fWv"/>
+                                    <constraint firstItem="fyk-Dg-9aK" firstAttribute="top" secondItem="fls-fW-xdb" secondAttribute="top" constant="4" id="1z2-CX-GN9"/>
+                                    <constraint firstAttribute="trailing" secondItem="HWZ-5o-cYX" secondAttribute="trailing" constant="8" id="2XX-oA-TaR"/>
+                                    <constraint firstItem="Ia0-Yq-MAs" firstAttribute="leading" secondItem="fls-fW-xdb" secondAttribute="leading" constant="8" id="8CF-om-1Pj"/>
+                                    <constraint firstItem="Ia0-Yq-MAs" firstAttribute="top" secondItem="fyk-Dg-9aK" secondAttribute="bottom" constant="4" id="DQh-3L-Yah"/>
+                                    <constraint firstItem="fyk-Dg-9aK" firstAttribute="leading" secondItem="fls-fW-xdb" secondAttribute="leading" constant="8" id="Gji-9t-gIF"/>
+                                    <constraint firstAttribute="trailing" secondItem="fyk-Dg-9aK" secondAttribute="trailing" constant="8" id="Rkc-tq-pDe"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ia0-Yq-MAs" secondAttribute="trailing" constant="8" id="eei-wT-1lq"/>
+                                    <constraint firstAttribute="bottom" secondItem="HWZ-5o-cYX" secondAttribute="bottom" constant="8" id="jfq-wM-N1t"/>
+                                    <constraint firstItem="2yb-4z-gFX" firstAttribute="leading" secondItem="fls-fW-xdb" secondAttribute="leading" constant="8" id="ksP-lM-vFy"/>
+                                    <constraint firstItem="2yb-4z-gFX" firstAttribute="top" secondItem="Ia0-Yq-MAs" secondAttribute="bottom" constant="8" symbolic="YES" id="mWh-Sb-Vf5"/>
+                                    <constraint firstAttribute="bottom" secondItem="2yb-4z-gFX" secondAttribute="bottom" constant="8" id="t7H-ql-e4i"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -649,8 +685,8 @@
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOm-8X-7X2">
-                                <rect key="frame" x="202.5" y="254" width="9.5" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vOm-8X-7X2">
+                                <rect key="frame" x="22" y="254" width="370" height="22"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -698,23 +734,38 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've Made Zero Guesses" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydh-9C-Ow0">
-                                <rect key="frame" x="107" y="394" width="200.5" height="50"/>
+                                <rect key="frame" x="107" y="394" width="200.5" height="18.5"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="korean8" translatesAutoresizingMaskIntoConstraints="NO" id="FAX-ab-cvT">
-                                <rect key="frame" x="0.0" y="452" width="414" height="410"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="410" id="HsY-Gi-RDd"/>
-                                    <constraint firstAttribute="width" secondItem="FAX-ab-cvT" secondAttribute="height" multiplier="207:205" id="WER-Fx-BWw"/>
-                                </constraints>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="koreanFood" translatesAutoresizingMaskIntoConstraints="NO" id="VmQ-Ak-Emo">
                                 <rect key="frame" x="222" y="44" width="172" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="6u6-of-6pQ"/>
                                     <constraint firstAttribute="width" constant="172" id="RqZ-xg-5qr"/>
+                                </constraints>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3s-X4-TkF">
+                                <rect key="frame" x="0.0" y="788.5" width="414" height="73.5"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="47r-vh-F2X"/>
+                                    <barButtonItem title="Return to Cuisine Selection" id="r6x-xm-KV2">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="r4S-fK-PgU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4qG-IN-S4f"/>
+                                </items>
+                                <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="korean8" translatesAutoresizingMaskIntoConstraints="NO" id="FAX-ab-cvT">
+                                <rect key="frame" x="10" y="432.5" width="394" height="336"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FAX-ab-cvT" secondAttribute="height" multiplier="197:168" id="GTj-a2-MUR"/>
+                                    <constraint firstAttribute="height" constant="336" id="KgA-cE-T4r"/>
+                                    <constraint firstAttribute="width" constant="394" id="XXv-TQ-Loy"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -723,10 +774,9 @@
                         <constraints>
                             <constraint firstItem="FSa-ew-WZj" firstAttribute="leading" secondItem="dK1-vA-DPB" secondAttribute="leading" constant="159" id="1aW-p6-9L0"/>
                             <constraint firstItem="VmQ-Ak-Emo" firstAttribute="leading" secondItem="S9s-aV-pSa" secondAttribute="trailing" constant="8" symbolic="YES" id="1r2-V9-MLf"/>
+                            <constraint firstItem="FAX-ab-cvT" firstAttribute="top" secondItem="Ydh-9C-Ow0" secondAttribute="bottom" constant="20" id="21Z-v2-m4V"/>
                             <constraint firstItem="FSa-ew-WZj" firstAttribute="trailing" secondItem="HV9-fD-rrg" secondAttribute="trailing" id="2Ep-qA-9Df"/>
-                            <constraint firstItem="FAX-ab-cvT" firstAttribute="bottom" secondItem="dK1-vA-DPB" secondAttribute="bottom" id="984-DN-ZIc"/>
                             <constraint firstItem="FSa-ew-WZj" firstAttribute="top" secondItem="Y9F-KT-CMU" secondAttribute="bottom" constant="8" symbolic="YES" id="9CD-mS-tge"/>
-                            <constraint firstItem="NZz-AJ-7AJ" firstAttribute="trailing" secondItem="FAX-ab-cvT" secondAttribute="trailing" id="9am-qu-iyJ"/>
                             <constraint firstItem="Ydh-9C-Ow0" firstAttribute="top" secondItem="FSa-ew-WZj" secondAttribute="bottom" constant="8" symbolic="YES" id="EhM-4D-ThV"/>
                             <constraint firstItem="dK1-vA-DPB" firstAttribute="trailing" secondItem="VmQ-Ak-Emo" secondAttribute="trailing" constant="20" id="G1a-ME-S9n"/>
                             <constraint firstItem="NZz-AJ-7AJ" firstAttribute="centerX" secondItem="Ydh-9C-Ow0" secondAttribute="centerX" id="GGE-1R-z8v"/>
@@ -734,18 +784,25 @@
                             <constraint firstItem="HV9-fD-rrg" firstAttribute="top" secondItem="dK1-vA-DPB" secondAttribute="top" constant="4" id="IT5-FM-hWh"/>
                             <constraint firstItem="vOm-8X-7X2" firstAttribute="top" secondItem="NZz-AJ-7AJ" secondAttribute="bottom" constant="8" symbolic="YES" id="IZb-Ct-8jk"/>
                             <constraint firstItem="NZz-AJ-7AJ" firstAttribute="leading" secondItem="F4C-3g-AWo" secondAttribute="leading" id="IxT-Db-nks"/>
+                            <constraint firstItem="dK1-vA-DPB" firstAttribute="trailing" secondItem="FAX-ab-cvT" secondAttribute="trailing" constant="10" id="LrG-gn-9Ha"/>
+                            <constraint firstItem="FAX-ab-cvT" firstAttribute="centerX" secondItem="F4C-3g-AWo" secondAttribute="centerX" id="MEL-vV-umM"/>
+                            <constraint firstItem="FAX-ab-cvT" firstAttribute="leading" secondItem="dK1-vA-DPB" secondAttribute="leading" constant="10" id="QtC-pb-90E"/>
                             <constraint firstItem="NZz-AJ-7AJ" firstAttribute="centerX" secondItem="vOm-8X-7X2" secondAttribute="centerX" id="SZ0-aS-HOn"/>
-                            <constraint firstItem="FAX-ab-cvT" firstAttribute="top" secondItem="Ydh-9C-Ow0" secondAttribute="bottom" constant="8" symbolic="YES" id="TEs-8M-hYW"/>
                             <constraint firstItem="Y9F-KT-CMU" firstAttribute="leading" secondItem="dK1-vA-DPB" secondAttribute="leading" constant="133" id="XJo-st-0ey"/>
-                            <constraint firstItem="NZz-AJ-7AJ" firstAttribute="leading" secondItem="FAX-ab-cvT" secondAttribute="leading" id="YDE-IY-9Fe"/>
+                            <constraint firstItem="e3s-X4-TkF" firstAttribute="trailing" secondItem="dK1-vA-DPB" secondAttribute="trailing" id="YF8-bC-lIW"/>
                             <constraint firstItem="FSa-ew-WZj" firstAttribute="top" secondItem="F4C-3g-AWo" secondAttribute="top" constant="353" id="ZHv-jK-MDV"/>
                             <constraint firstItem="NZz-AJ-7AJ" firstAttribute="top" secondItem="VmQ-Ak-Emo" secondAttribute="bottom" constant="20" id="daK-C3-t0F"/>
+                            <constraint firstItem="vOm-8X-7X2" firstAttribute="leading" secondItem="dK1-vA-DPB" secondAttribute="leading" constant="22" id="eDg-cy-oWT"/>
                             <constraint firstItem="HV9-fD-rrg" firstAttribute="leading" secondItem="S9s-aV-pSa" secondAttribute="leading" id="eb0-bi-beF"/>
+                            <constraint firstItem="e3s-X4-TkF" firstAttribute="bottom" secondItem="dK1-vA-DPB" secondAttribute="bottom" id="gbc-cX-9mL"/>
                             <constraint firstItem="NZz-AJ-7AJ" firstAttribute="centerX" secondItem="Y9F-KT-CMU" secondAttribute="centerX" id="hWs-T6-nKB"/>
                             <constraint firstItem="NZz-AJ-7AJ" firstAttribute="top" secondItem="VmQ-Ak-Emo" secondAttribute="bottom" constant="20" id="lth-lu-gBO"/>
                             <constraint firstItem="dK1-vA-DPB" firstAttribute="trailing" secondItem="HV9-fD-rrg" secondAttribute="trailing" constant="164" id="pdl-Qw-VIB"/>
+                            <constraint firstItem="e3s-X4-TkF" firstAttribute="top" secondItem="FAX-ab-cvT" secondAttribute="bottom" constant="20" id="qaq-J6-Fau"/>
                             <constraint firstAttribute="trailing" secondItem="NZz-AJ-7AJ" secondAttribute="trailing" id="uxD-1N-CS0"/>
+                            <constraint firstItem="e3s-X4-TkF" firstAttribute="leading" secondItem="dK1-vA-DPB" secondAttribute="leading" id="vu8-9P-PyS"/>
                             <constraint firstItem="NZz-AJ-7AJ" firstAttribute="top" secondItem="F4C-3g-AWo" secondAttribute="top" constant="160" id="xXJ-qX-SF2"/>
+                            <constraint firstItem="dK1-vA-DPB" firstAttribute="trailing" secondItem="vOm-8X-7X2" secondAttribute="trailing" constant="22" id="xsN-Be-qAQ"/>
                             <constraint firstItem="NZz-AJ-7AJ" firstAttribute="top" secondItem="S9s-aV-pSa" secondAttribute="bottom" constant="33" id="yYr-hW-8pN"/>
                             <constraint firstItem="dK1-vA-DPB" firstAttribute="trailing" secondItem="Y9F-KT-CMU" secondAttribute="trailing" constant="133" id="zCx-b9-lbe"/>
                         </constraints>
@@ -794,7 +851,7 @@
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vM-pA-zeT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5vM-pA-zeT">
                                 <rect key="frame" x="22" y="226" width="369" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="Dko-uc-Rhw"/>
@@ -817,9 +874,6 @@
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="italian8" translatesAutoresizingMaskIntoConstraints="NO" id="VA6-Pm-dXc">
-                                <rect key="frame" x="0.0" y="390.5" width="414" height="471.5"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foods Missed: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5q-7m-eye">
                                 <rect key="frame" x="20" y="77" width="220" height="50"/>
                                 <constraints>
@@ -855,12 +909,30 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcJ-m2-gkH">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ezb-qA-you"/>
+                                    <barButtonItem title="Return to Cuisine Selection" id="4AD-c7-BZ0">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="2rY-d7-lGS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pVa-6R-qP5"/>
+                                </items>
+                                <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="italian8" translatesAutoresizingMaskIntoConstraints="NO" id="VA6-Pm-dXc">
+                                <rect key="frame" x="0.0" y="390.5" width="414" height="427.5"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T39-gP-wlb"/>
                         <color key="backgroundColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="VA6-Pm-dXc" firstAttribute="bottom" secondItem="T39-gP-wlb" secondAttribute="bottom" id="2Vm-2S-cxq"/>
+                            <constraint firstItem="kcJ-m2-gkH" firstAttribute="leading" secondItem="T39-gP-wlb" secondAttribute="leading" id="4yG-3R-anA"/>
                             <constraint firstItem="pJQ-Gu-1Rm" firstAttribute="leading" secondItem="T39-gP-wlb" secondAttribute="leading" constant="20" id="5Mx-bm-iyA"/>
+                            <constraint firstItem="kcJ-m2-gkH" firstAttribute="trailing" secondItem="T39-gP-wlb" secondAttribute="trailing" id="7AB-xt-xDU"/>
                             <constraint firstItem="pJQ-Gu-1Rm" firstAttribute="top" secondItem="T39-gP-wlb" secondAttribute="top" constant="4" id="DsN-8M-JGr"/>
                             <constraint firstItem="X5q-7m-eye" firstAttribute="top" secondItem="pJQ-Gu-1Rm" secondAttribute="bottom" constant="8" symbolic="YES" id="GyL-Si-eqS"/>
                             <constraint firstItem="VA6-Pm-dXc" firstAttribute="leading" secondItem="T39-gP-wlb" secondAttribute="leading" id="IVf-wr-IDv"/>
@@ -870,6 +942,7 @@
                             <constraint firstItem="eKy-ac-tRN" firstAttribute="leading" secondItem="T39-gP-wlb" secondAttribute="leading" constant="22" id="STx-Gi-PzB"/>
                             <constraint firstItem="T39-gP-wlb" firstAttribute="trailing" secondItem="pJQ-Gu-1Rm" secondAttribute="trailing" constant="164" id="Xjh-oE-2HC"/>
                             <constraint firstItem="NUx-ME-ik7" firstAttribute="leading" secondItem="X5q-7m-eye" secondAttribute="trailing" constant="8" symbolic="YES" id="aRk-vy-RGI"/>
+                            <constraint firstItem="T39-gP-wlb" firstAttribute="bottom" secondItem="VA6-Pm-dXc" secondAttribute="bottom" constant="44" id="cZ5-zu-71Y"/>
                             <constraint firstItem="ySu-KV-vUz" firstAttribute="top" secondItem="5vM-pA-zeT" secondAttribute="bottom" constant="8" id="deb-xY-r6X"/>
                             <constraint firstItem="eKy-ac-tRN" firstAttribute="top" secondItem="zby-Ec-6KZ" secondAttribute="bottom" constant="8" symbolic="YES" id="f90-GD-34m"/>
                             <constraint firstItem="T39-gP-wlb" firstAttribute="trailing" secondItem="5vM-pA-zeT" secondAttribute="trailing" constant="23" id="fRY-Ss-2iB"/>
@@ -877,6 +950,7 @@
                             <constraint firstItem="T39-gP-wlb" firstAttribute="trailing" secondItem="ySu-KV-vUz" secondAttribute="trailing" constant="133" id="fwd-gk-Byk"/>
                             <constraint firstItem="zby-Ec-6KZ" firstAttribute="leading" secondItem="T39-gP-wlb" secondAttribute="leading" constant="159" id="g0w-LJ-4Kz"/>
                             <constraint firstItem="5vM-pA-zeT" firstAttribute="leading" secondItem="T39-gP-wlb" secondAttribute="leading" constant="22" id="hKu-om-MsY"/>
+                            <constraint firstItem="kcJ-m2-gkH" firstAttribute="bottom" secondItem="T39-gP-wlb" secondAttribute="bottom" id="hlC-B2-3kR"/>
                             <constraint firstItem="T39-gP-wlb" firstAttribute="trailing" secondItem="eKy-ac-tRN" secondAttribute="trailing" constant="22" id="idp-Ez-MbN"/>
                             <constraint firstItem="H1k-b6-LV7" firstAttribute="top" secondItem="X5q-7m-eye" secondAttribute="bottom" constant="33" id="ivZ-3k-54V"/>
                             <constraint firstItem="VA6-Pm-dXc" firstAttribute="trailing" secondItem="T39-gP-wlb" secondAttribute="trailing" id="jfn-yX-KsU"/>
@@ -950,7 +1024,7 @@
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6L5-i6-cEx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6L5-i6-cEx">
                                 <rect key="frame" x="23" y="246" width="369" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="My8-RX-1rf"/>
@@ -1011,9 +1085,24 @@
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dimsum8" translatesAutoresizingMaskIntoConstraints="NO" id="IjF-eu-4Ps">
-                                <rect key="frame" x="0.0" y="442" width="414" height="420"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dimsum8" translatesAutoresizingMaskIntoConstraints="NO" id="IjF-eu-4Ps">
+                                <rect key="frame" x="0.0" y="442" width="414" height="376"/>
                             </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g2r-re-UsB">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XH1-sC-Ich"/>
+                                    <barButtonItem title="Return to Cuisine Selection" id="AnW-OH-fs0">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="Zf3-pI-vDh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="PLE-CS-xEN"/>
+                                </items>
+                                <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oC7-yr-Rjo"/>
                         <color key="backgroundColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1036,7 +1125,6 @@
                             <constraint firstItem="IjF-eu-4Ps" firstAttribute="leading" secondItem="oC7-yr-Rjo" secondAttribute="leading" id="Y5f-vw-ioL"/>
                             <constraint firstItem="js7-zT-TWj" firstAttribute="top" secondItem="8hl-1s-1SU" secondAttribute="bottom" constant="8" id="eIq-Lu-EfE"/>
                             <constraint firstItem="oC7-yr-Rjo" firstAttribute="trailing" secondItem="Xx0-5Q-MKU" secondAttribute="trailing" constant="176" id="fiq-tM-HzV"/>
-                            <constraint firstItem="oC7-yr-Rjo" firstAttribute="bottom" secondItem="IjF-eu-4Ps" secondAttribute="bottom" id="iRc-lP-2Ez"/>
                             <constraint firstItem="oC7-yr-Rjo" firstAttribute="trailing" secondItem="6L5-i6-cEx" secondAttribute="trailing" constant="22" id="imp-UV-hUN"/>
                             <constraint firstItem="oC7-yr-Rjo" firstAttribute="trailing" secondItem="0xk-eU-EMs" secondAttribute="trailing" constant="176" id="jkq-o4-MUd"/>
                             <constraint firstItem="6L5-i6-cEx" firstAttribute="top" secondItem="Ce7-lw-V6i" secondAttribute="bottom" constant="8" id="kCR-Tl-2Et"/>
@@ -1096,6 +1184,7 @@
                                 <subviews>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p64-qo-gNX">
                                         <rect key="frame" x="0.0" y="741" width="414" height="49"/>
+                                        <color key="backgroundColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <items>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="zzX-yR-7Ck"/>
                                             <barButtonItem title="Return to Cuisine Selection" id="1Hk-8I-iRZ">
@@ -1115,7 +1204,7 @@
                                             <constraint firstAttribute="height" constant="75" id="oSO-B1-Hsj"/>
                                         </constraints>
                                         <attributedString key="attributedText">
-                                            <fragment content="Are you a Real Bostonian? You aren't related to John Krasinski, right?">
+                                            <fragment content="Are you secretly Chinese? I mean, civilization had to start somewhere, right?">
                                                 <attributes>
                                                     <font key="NSFont" size="18" name="AmericanTypewriter"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -1164,11 +1253,11 @@
                                             <constraint firstAttribute="width" constant="398" id="zJy-XY-zMU"/>
                                         </constraints>
                                         <attributedString key="attributedText">
-                                            <fragment content="Are You Ready to Eat?">
+                                            <fragment content="Are You Ready to Eat? If So, Tap the Top Right Button!">
                                                 <attributes>
                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <font key="NSFont" size="18" name="AmericanTypewriter"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -1291,7 +1380,7 @@
                                                     <constraint firstAttribute="height" constant="75" id="gSh-SL-VWg"/>
                                                 </constraints>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="Are you a Real Bostonian? You aren't related to John Krasinski, right?">
+                                                    <fragment content="No way. Were you born in Italy?">
                                                         <attributes>
                                                             <font key="NSFont" size="18" name="AmericanTypewriter"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -1347,25 +1436,25 @@
                                                 </connections>
                                             </button>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uYH-wO-Hnp">
-                                                <rect key="frame" x="8" y="487" width="398" height="298"/>
+                                                <rect key="frame" x="8" y="487" width="398" height="283"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="uYH-wO-Hnp" secondAttribute="height" multiplier="199:149" id="19U-q0-X3f"/>
                                                     <constraint firstAttribute="width" constant="398" id="DBc-td-tgC"/>
-                                                    <constraint firstAttribute="height" constant="298" id="ZA5-nI-Q61"/>
+                                                    <constraint firstAttribute="height" constant="283" id="Mdi-gI-287"/>
+                                                    <constraint firstAttribute="width" secondItem="uYH-wO-Hnp" secondAttribute="height" multiplier="398:283" id="wqL-Vu-5JF"/>
                                                 </constraints>
                                             </mapView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9Y-tM-6Js">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="D9Y-tM-6Js">
                                                 <rect key="frame" x="8" y="184" width="398" height="295"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="295" id="CIA-bA-3z1"/>
                                                     <constraint firstAttribute="width" constant="398" id="jOe-CY-YFB"/>
                                                 </constraints>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="Are You Ready to Eat?">
+                                                    <fragment content="Are You Ready to Eat? If So, Tap the Top Right Button!">
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <font key="NSFont" size="18" name="AmericanTypewriter"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -1374,10 +1463,10 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
+                                            <constraint firstItem="gcU-ze-fmA" firstAttribute="top" secondItem="uYH-wO-Hnp" secondAttribute="bottom" constant="15" id="4R3-xm-QRT"/>
                                             <constraint firstItem="TSN-jD-hdR" firstAttribute="top" secondItem="IG4-EA-LY1" secondAttribute="bottom" id="7Ok-t2-ALN"/>
                                             <constraint firstItem="5Qm-T7-28U" firstAttribute="top" secondItem="9Ey-KZ-iJU" secondAttribute="top" constant="52" id="83E-3s-7gW"/>
                                             <constraint firstItem="IG4-EA-LY1" firstAttribute="leading" secondItem="5Qm-T7-28U" secondAttribute="trailing" constant="43" id="EFW-df-Ss4"/>
-                                            <constraint firstAttribute="bottom" secondItem="gcU-ze-fmA" secondAttribute="bottom" constant="8" id="FkC-a0-wm2"/>
                                             <constraint firstItem="gcU-ze-fmA" firstAttribute="leading" secondItem="9Ey-KZ-iJU" secondAttribute="leading" id="J9g-aP-85g"/>
                                             <constraint firstItem="D9Y-tM-6Js" firstAttribute="top" secondItem="TSN-jD-hdR" secondAttribute="bottom" constant="8" symbolic="YES" id="JxX-27-OC5"/>
                                             <constraint firstAttribute="trailing" secondItem="uYH-wO-Hnp" secondAttribute="trailing" constant="8" id="Ldy-hu-FPD"/>
@@ -1385,8 +1474,8 @@
                                             <constraint firstItem="TSN-jD-hdR" firstAttribute="leading" secondItem="9Ey-KZ-iJU" secondAttribute="leading" constant="8" id="NjX-Ig-oWk"/>
                                             <constraint firstItem="5Qm-T7-28U" firstAttribute="leading" secondItem="9Ey-KZ-iJU" secondAttribute="leading" constant="37" id="O0g-p1-QMh"/>
                                             <constraint firstItem="uYH-wO-Hnp" firstAttribute="leading" secondItem="9Ey-KZ-iJU" secondAttribute="leading" constant="8" id="Og8-rU-Hvh"/>
-                                            <constraint firstItem="gcU-ze-fmA" firstAttribute="top" secondItem="uYH-wO-Hnp" secondAttribute="bottom" id="Pd9-k4-mUL"/>
                                             <constraint firstItem="D9Y-tM-6Js" firstAttribute="leading" secondItem="9Ey-KZ-iJU" secondAttribute="leading" constant="8" id="R4X-Bh-HUF"/>
+                                            <constraint firstAttribute="bottom" secondItem="gcU-ze-fmA" secondAttribute="bottom" constant="8" id="gfW-cD-pc6"/>
                                             <constraint firstAttribute="trailing" secondItem="D9Y-tM-6Js" secondAttribute="trailing" constant="8" id="h16-4e-6AJ"/>
                                             <constraint firstAttribute="trailing" secondItem="TSN-jD-hdR" secondAttribute="trailing" constant="8" id="jqN-s9-S5h"/>
                                             <constraint firstItem="uYH-wO-Hnp" firstAttribute="top" secondItem="D9Y-tM-6Js" secondAttribute="bottom" constant="8" symbolic="YES" id="kQ4-Jr-4RM"/>
@@ -1440,6 +1529,7 @@
                                 <subviews>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OfE-ye-9pF">
                                         <rect key="frame" x="0.0" y="749" width="414" height="41"/>
+                                        <color key="backgroundColor" red="0.84313726430000002" green="0.79215681550000006" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <items>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="mXn-da-7c6"/>
                                             <barButtonItem title="Return to Cuisine Selection" id="J1C-Sw-S4v">
@@ -1459,7 +1549,7 @@
                                             <constraint firstAttribute="height" constant="75" id="cZE-N7-0mN"/>
                                         </constraints>
                                         <attributedString key="attributedText">
-                                            <fragment content="Are you a Real Bostonian? You aren't related to John Krasinski, right?">
+                                            <fragment content="You stan Kimchi more than BTS?">
                                                 <attributes>
                                                     <font key="NSFont" size="18" name="AmericanTypewriter"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -1491,17 +1581,18 @@
                                             <action selector="koreanRecButtonPressed:" destination="N0g-R9-gpc" eventType="touchUpInside" id="afK-mH-lDe"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1Y-GY-o6M">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="J1Y-GY-o6M">
                                         <rect key="frame" x="8" y="148" width="398" height="295"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="398" id="Slm-Ts-L8W"/>
                                             <constraint firstAttribute="height" constant="295" id="asn-v0-xQU"/>
                                         </constraints>
                                         <attributedString key="attributedText">
-                                            <fragment content="Are You Ready to Eat?">
+                                            <fragment content="Are You Ready to Eat? If So, Tap the Top Right Button!">
                                                 <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <font key="NSFont" size="18" name="AmericanTypewriter"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -1592,11 +1683,13 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="appIconFood" width="2000" height="2000"/>
+        <image name="appleMaps" width="1024" height="682"/>
         <image name="bostonFood" width="616" height="462"/>
         <image name="bostonianLabel" width="499" height="552"/>
         <image name="chineseLabel" width="800" height="800"/>
         <image name="dimsum" width="3000" height="2001"/>
         <image name="dimsum8" width="572" height="570"/>
+        <image name="googleReviews" width="800" height="800"/>
         <image name="italian8" width="714" height="620"/>
         <image name="italianFood" width="1600" height="900"/>
         <image name="italianLabel" width="1300" height="1300"/>
