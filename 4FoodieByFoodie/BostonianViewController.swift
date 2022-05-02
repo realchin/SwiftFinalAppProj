@@ -20,7 +20,7 @@ class BostonianViewController: UIViewController {
     @IBOutlet weak var gameStatusMessageLabel: UILabel!
     @IBOutlet weak var bostonImageView: UIImageView!
     
-    var bosWordsToGuess = ["ROLL", "CLAMCHOWDER", "LOBSTERROLL", "BAKEDBEANS", "CREAMPIE", "OYSTER", "FENWAYFRANK", "ROASTBEEF", "CLAMCAKE"]
+    var bosWordsToGuess = ["CLAMCHOWDER", "LOBSTERROLL", "BAKEDBEANS", "CREAMPIE", "OYSTER", "FENWAYFRANK", "ROASTBEEF", "CLAMCAKE"]
     
     var currentWordIndex = 0
     var wordToGuess = ""
@@ -106,17 +106,18 @@ class BostonianViewController: UIViewController {
         if wordBeingRevealedLabel.text!.contains("_") == false { // THIS IS WHERE WE TRANSITION TO MAPVIEW
             wordsGuessedCount += 1
             updateAfterWinOrLose()
-            gameStatusMessageLabel.text = "Good Job! Now check out some Bostonian Foods!"
+            gameStatusMessageLabel.text = "Good Job! Now check out some Boston Food! In 3...2...1"
             guessLetterButton.isHidden = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+            self.playSound(name: "word-guessed")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 6.0, execute: {
                 self.performSegue(withIdentifier: "ShowBostonianFoodRec", sender: nil)
             })
             
         } else if wrongGuessesRemaining == 0 {
-            gameStatusMessageLabel.text = "You are all out of guesses! However, don't fret! Do check out some Bostonian foods!"
+            gameStatusMessageLabel.text = "You are all out of guesses! However, don't fret! Do check out some Bostonian food!"
             wordsMissedCount += 1
             updateAfterWinOrLose()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 10.0, execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
                 self.performSegue(withIdentifier: "ShowBostonianFoodRec", sender: nil)
             })
         }

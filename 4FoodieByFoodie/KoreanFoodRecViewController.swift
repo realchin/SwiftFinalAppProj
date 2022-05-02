@@ -36,6 +36,7 @@ class KoreanFoodRecViewController: UIViewController {
         ["title": "Ruka [$$$]", "latitude": 42.35444874124745, "longitude": -71.0617552148486],
         ["title": "Mahaniyom [$$]", "latitude": 42.33267120807803, "longitude": -71.1187899000212],
         ["title": "Coreanos Allston [$]", "latitude": 42.352967013136386, "longitude": -71.1330532047291],
+        ["title": "Bab Korean Bistro [$$ | near BC]", "latitude": 42.341765908386, "longitude": -71.12363385600571],
         ["title": "kimchipapi kitchen [$$ | near BC]", "latitude": 42.3535318107894, "longitude": -71.13234027633744]
     ]
     

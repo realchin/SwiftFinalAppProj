@@ -22,8 +22,6 @@
 		007C8C08281B09940024104D /* KoreanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C8C07281B09940024104D /* KoreanViewController.swift */; };
 		007C8C0A281B0C000024104D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C8C09281B0C000024104D /* AboutViewController.swift */; };
 		007C8C0C281B0D470024104D /* BosFoodRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C8C0B281B0D470024104D /* BosFoodRecViewController.swift */; };
-		009B659F281B47A200119265 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B659E281B47A200119265 /* APIKeys.swift */; };
-		D6FC5D40AEC583C27FE56E37 /* libPods-4FoodieByFoodie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C421FE6902132B8F557A511 /* libPods-4FoodieByFoodie.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,10 +42,9 @@
 		007C8C07281B09940024104D /* KoreanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreanViewController.swift; sourceTree = "<group>"; };
 		007C8C09281B0C000024104D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		007C8C0B281B0D470024104D /* BosFoodRecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BosFoodRecViewController.swift; sourceTree = "<group>"; };
-		009B659E281B47A200119265 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
-		225F2F2C874CB00A2A5EF9C3 /* Pods-4FoodieByFoodie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4FoodieByFoodie.debug.xcconfig"; path = "Target Support Files/Pods-4FoodieByFoodie/Pods-4FoodieByFoodie.debug.xcconfig"; sourceTree = "<group>"; };
-		2C421FE6902132B8F557A511 /* libPods-4FoodieByFoodie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-4FoodieByFoodie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9DE2A6331C4EB736258F7BF7 /* Pods-4FoodieByFoodie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4FoodieByFoodie.release.xcconfig"; path = "Target Support Files/Pods-4FoodieByFoodie/Pods-4FoodieByFoodie.release.xcconfig"; sourceTree = "<group>"; };
+		8F864318ED758C6F94B5E1A3 /* Pods-4FoodieByFoodie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4FoodieByFoodie.release.xcconfig"; path = "Target Support Files/Pods-4FoodieByFoodie/Pods-4FoodieByFoodie.release.xcconfig"; sourceTree = "<group>"; };
+		A94E5553D34EACC003D332A2 /* libPods-4FoodieByFoodie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-4FoodieByFoodie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E76F9397F749559C6F7A403E /* Pods-4FoodieByFoodie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4FoodieByFoodie.debug.xcconfig"; path = "Target Support Files/Pods-4FoodieByFoodie/Pods-4FoodieByFoodie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +52,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6FC5D40AEC583C27FE56E37 /* libPods-4FoodieByFoodie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,8 +63,8 @@
 			children = (
 				006552A5281A16CB00662743 /* 4FoodieByFoodie */,
 				006552A4281A16CB00662743 /* Products */,
-				C48D2BBA7E1767DC7E38D95C /* Pods */,
-				DF7AF4D88B6AA23EFE71370E /* Frameworks */,
+				F2B8B94797337B9D563AE8F0 /* Pods */,
+				EB54AA56D0A0DAAE21EF6711 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,7 +79,6 @@
 		006552A5281A16CB00662743 /* 4FoodieByFoodie */ = {
 			isa = PBXGroup;
 			children = (
-				009B659E281B47A200119265 /* APIKeys.swift */,
 				006552A6281A16CB00662743 /* AppDelegate.swift */,
 				006552A8281A16CB00662743 /* SceneDelegate.swift */,
 				006552AA281A16CB00662743 /* SelectionViewController.swift */,
@@ -104,21 +99,21 @@
 			path = 4FoodieByFoodie;
 			sourceTree = "<group>";
 		};
-		C48D2BBA7E1767DC7E38D95C /* Pods */ = {
+		EB54AA56D0A0DAAE21EF6711 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				225F2F2C874CB00A2A5EF9C3 /* Pods-4FoodieByFoodie.debug.xcconfig */,
-				9DE2A6331C4EB736258F7BF7 /* Pods-4FoodieByFoodie.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		DF7AF4D88B6AA23EFE71370E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2C421FE6902132B8F557A511 /* libPods-4FoodieByFoodie.a */,
+				A94E5553D34EACC003D332A2 /* libPods-4FoodieByFoodie.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2B8B94797337B9D563AE8F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E76F9397F749559C6F7A403E /* Pods-4FoodieByFoodie.debug.xcconfig */,
+				8F864318ED758C6F94B5E1A3 /* Pods-4FoodieByFoodie.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +238,6 @@
 				0058F06A281A484B0086C872 /* ChineseViewController.swift in Sources */,
 				006552AB281A16CB00662743 /* SelectionViewController.swift in Sources */,
 				007C8C0C281B0D470024104D /* BosFoodRecViewController.swift in Sources */,
-				009B659F281B47A200119265 /* APIKeys.swift in Sources */,
 				006D0EC9281B9858001355E9 /* ItalianFoodRecViewController.swift in Sources */,
 				006552A7281A16CB00662743 /* AppDelegate.swift in Sources */,
 				007C8C0A281B0C000024104D /* AboutViewController.swift in Sources */,
@@ -390,7 +384,7 @@
 		};
 		006552B8281A16CC00662743 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 225F2F2C874CB00A2A5EF9C3 /* Pods-4FoodieByFoodie.debug.xcconfig */;
+			baseConfigurationReference = E76F9397F749559C6F7A403E /* Pods-4FoodieByFoodie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -420,7 +414,7 @@
 		};
 		006552B9281A16CC00662743 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9DE2A6331C4EB736258F7BF7 /* Pods-4FoodieByFoodie.release.xcconfig */;
+			baseConfigurationReference = 8F864318ED758C6F94B5E1A3 /* Pods-4FoodieByFoodie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

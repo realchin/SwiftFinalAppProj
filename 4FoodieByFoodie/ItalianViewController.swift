@@ -21,7 +21,7 @@ class ItalianViewController: UIViewController {
     @IBOutlet weak var italianImageView: UIImageView!
     
     
-    var wordsToGuess = ["BUNS", "TIRAMISU", "PIZZA", "RISOTTO", "LASAGNA", "RAVIOLI", "TORTELLINI", "PESTO", "SPAGHETTI"]
+    var wordsToGuess = ["TIRAMISU", "PIZZA", "RISOTTO", "LASAGNA", "RAVIOLI", "TORTELLINI", "PESTO", "SPAGHETTI"]
     
     var currentWordIndex = 0
     var wordToGuess = ""
@@ -120,13 +120,22 @@ class ItalianViewController: UIViewController {
         gameStatusMessageLabel.text = "You've Made \(guessCount) \(guesses)."
         
         if wordBeingRevealedLabel.text!.contains("_") == false { // THIS IS WHERE WE TRANSITION TO MAPVIEW
-            performSegue(withIdentifier: "ShowItalianFoodRec", sender: nil)
+            // performSegue(withIdentifier: "ShowItalianFoodRec", sender: nil)
             wordsGuessedCount += 1
             updateAfterWinOrLose()
+            gameStatusMessageLabel.text = "Good Job! Now check out some Italian Food! In 3...2...1"
+            guessLetterButton.isHidden = true
+            self.playSound(name: "word-guessed")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 6.0, execute: {
+                self.performSegue(withIdentifier: "ShowItalianFoodRec", sender: nil)
+            })
         } else if wrongGuessesRemaining == 0 {
-            gameStatusMessageLabel.text = "So sorry. You are all out of guesses."
+            gameStatusMessageLabel.text = "You are all out of guesses! However, don't fret! Do check out some Italian food!"
             wordsMissedCount += 1
             updateAfterWinOrLose()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
+                self.performSegue(withIdentifier: "ShowItalianFoodRec", sender: nil)
+            })
         }
         
         if currentWordIndex == wordsToGuess.count {

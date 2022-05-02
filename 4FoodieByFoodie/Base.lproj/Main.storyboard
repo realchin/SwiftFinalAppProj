@@ -405,6 +405,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="49" id="h2S-Z0-r0A"/>
                                             <constraint firstAttribute="width" constant="159" id="hig-Z4-faM"/>
+                                            <constraint firstAttribute="width" secondItem="3GT-Py-N8G" secondAttribute="height" multiplier="159:49" id="yuq-89-bMd"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
@@ -427,6 +428,7 @@
                                         <rect key="frame" x="37" y="8" width="155" height="49"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="49" id="3Ia-3q-2Fh"/>
+                                            <constraint firstAttribute="width" secondItem="1p2-vk-xKp" secondAttribute="height" multiplier="155:49" id="9LE-Lm-Dh9"/>
                                             <constraint firstAttribute="width" constant="155" id="Pv4-a4-a9C"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
@@ -574,7 +576,7 @@
                                             <constraint firstAttribute="height" constant="321" id="SoY-K4-xxY"/>
                                             <constraint firstAttribute="width" constant="398" id="wXl-Mj-y73"/>
                                         </constraints>
-                                        <string key="text">As much as we are constanly spoiled by the fantastic, Michelin-grade dishes that BC Dining chefs whip up for us on a daily basis (note: BC is ranked 7th in the nation, 2018), we should take a break here and there to try out the diverse range of cuisines that are at our fingertips out in Greater Boston area. Just step right outside onto Comm Ave. Look to your left and to your right. Whichever direction you take will no doubt satisfy your tastebuds. Let's go!</string>
+                                        <string key="text">As much as we are constanly spoiled by the fantastic, Michelin-grade dishes that BC Dining chefs whip up for us on a daily basis (note: BC is ranked 7th in the nation, 2018), we should take a break here and there to try out the diverse range of cuisines that are at our fingertips out in the Greater Boston area. Just step right outside onto Comm Ave. Look to your left and to your right. Whichever direction you take will no doubt satisfy your tastebuds. Let's go!</string>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1586,7 +1588,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SIq-zc-vsc"/>
+        <segue reference="ZPg-Le-z2f"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="appIconFood" width="2000" height="2000"/>

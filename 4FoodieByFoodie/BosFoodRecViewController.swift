@@ -37,6 +37,7 @@ class BosFoodRecViewController: UIViewController {
         ["title": "Atlantic Fish Company [$$$]", "latitude": 42.34924316187964, "longitude": -71.08117676710242],
         ["title": "Union Oyster House [$$]", "latitude": 42.36127871680426, "longitude": -71.05692478192037],
         ["title": "Walrus & Carpenter Oyster Bar [$]", "latitude": 42.35977608264614, "longitude": -71.05584593244332],
+        ["title": "The Daily Catch Brookline [$ | near BC]", "latitude": 42.34614740578668, "longitude": -71.12777245523105],
         ["title": "Ivory Pearl [$ | near BC]", "latitude": 42.33872954377934, "longitude": -71.13903461223346]
     ]
     

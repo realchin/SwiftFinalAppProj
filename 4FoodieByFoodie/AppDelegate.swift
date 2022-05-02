@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import GooglePlaces
 import UserNotifications
 
 @main
@@ -14,9 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        UNUserNotificationCenter.current().delegate = self
+        // UNUserNotificationCenter.current().delegate = self
         
-        GMSPlacesClient.provideAPIKey(APIkeys.googlePlacesKey)
+        // GMSPlacesClient.provideAPIKey(APIkeys.googlePlacesKey)
         
         return true
     }
@@ -37,11 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
-extension AppDelegate: UNUserNotificationCenterDelegate {
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        let id = notification.request.identifier
-        print("Received in-app notification with ID = \(id)")
-        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
-        completionHandler([.alert, .sound])
-    }
-}
+//extension AppDelegate: UNUserNotificationCenterDelegate {
+//    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+//        let id = notification.request.identifier
+//        print("Received in-app notification with ID = \(id)")
+//        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+//        completionHandler([.alert, .sound])
+//    }
+//}

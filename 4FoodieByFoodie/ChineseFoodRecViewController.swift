@@ -35,6 +35,7 @@ class ChineseFoodRecViewController: UIViewController {
         ["title": "Zoe's Chinese Restaurant [$$]", "latitude": 42.38352144998973, "longitude": -71.11309308571049],
         ["title": "Hei La Moon Restaurant [$]", "latitude": 42.352384168728044, "longitude": -71.060214839188],
         ["title": "Empire Garden Restaurant [$]", "latitude": 42.35132667565789, "longitude": -71.0627595073544],
+        ["title": "Our Zone 第五空间 [$$ | near BC]", "latitude": 42.344228393796804, "longitude": -71.14306362935726],
         ["title": "MDM Noodles [$ | near BC]", "latitude": 42.34918494931043, "longitude": -71.15285169535248]
     ]
     

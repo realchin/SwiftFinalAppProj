@@ -37,7 +37,8 @@ class ItalianFoodRecViewController: UIViewController {
         ["title": "Davio's Northern Italian Steakhouse [$$$]", "latitude": 42.35022689225123, "longitude": -71.07028313779934],
         ["title": "The Salty Pig [$$]", "latitude": 42.346909255602995, "longitude": -71.07615269513961],
         ["title": "Casa Razdora [$]", "latitude": 42.35803663292029, "longitude": -71.05466612532071],
-        ["title": "Tartufo [$$ | near BC]", "latitude": 42.330299597696346, "longitude": -71.19114281504679]
+        ["title": "Tartufo [$$ | near BC]", "latitude": 42.330299597696346, "longitude": -71.19114281504679],
+        ["title": "Bottega di Capri [$$ | near BC]", "latitude": 42.334618712651476, "longitude": -71.11905891376512]
         
     ]
     
@@ -70,7 +71,7 @@ class ItalianFoodRecViewController: UIViewController {
         
         if recButton.isTouchInside {
             
-            italianRecList.text = "One fantastic restaurant to try out is:\nTartufo.\nHere is what a food critic has to say about the superb Italian cuisine dining experience:\nFrom David Nguyen, Pleasant, lively ambience. Excellent food. One of Newton's greatest local restaurants."
+            italianRecList.text = "One fantastic restaurant to try out is:\nBottega di Capri.\nHere is what a food critic has to say about the superb Italian cuisine dining experience:\nFrom Coop, A very casual place with delicious food. The staff was absolutely lovely, the alfredo was amazing and I felt like i was eating in my Grandmothers kitchen! Lots of people came through for takeout (it looked as though that might be their primary dinner business).  The owner will make up any combination you like, of sauce, pasta, veges, meats, etc. I'm in boston every 3 months and will definitely happily put on a few pounds with these folks!"
             
         }
         
